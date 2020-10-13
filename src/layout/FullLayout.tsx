@@ -332,7 +332,7 @@ function FullLayout(props: any) {
             </AppBar>
             { !kiosk && 
             <Drawer
-                variant="permanent"
+                variant="temporary"
                 ModalProps={{hideBackdrop: true, disableBackdropClick: true}}
                 classes={{paper: clsx(classes.drawerPaper, !openDrawer && classes.drawerPaperClose),}}
                 open={openDrawer}>
@@ -348,19 +348,19 @@ function FullLayout(props: any) {
                     <ListSubheader component="div">
                       Tus cositas
                     </ListSubheader>
-                    <ListItem button component={RouterLink} to="/cuentas" >
+                    <ListItem button component={RouterLink} to="/cuentas" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Cuentas"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/bienes" >
+                    <ListItem button component={RouterLink} to="/bienes" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Bienes"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/licencias" >
+                    <ListItem button component={RouterLink} to="/licencias" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Licencias y Permisos"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/cuentas" >
+                    <ListItem button component={RouterLink} to="/cuentas" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Inscripción / Beneficios / Prestaciones"/>
                     </ListItem>
@@ -368,22 +368,22 @@ function FullLayout(props: any) {
                     <ListSubheader component="div">
                       Gestiones
                     </ListSubheader>
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Infracciones y Pagos Voluntarios"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Sellados"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Trámites"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Reclamos"/>
                     </ListItem>
@@ -392,25 +392,25 @@ function FullLayout(props: any) {
                       Perifil
                     </ListSubheader>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Mis Datos"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Novedades"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Notificaciones"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/home" >
+                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Mis Documentos"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/apoderados" >
+                    <ListItem button component={RouterLink} to="/apoderados" onClick={handleDrawerClose}>
                         <ListItemIcon><Home color="secondary"/></ListItemIcon>
                         <ListItemText primary="Gestionar a otra persona"/>
                     </ListItem>
