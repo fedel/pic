@@ -45,6 +45,61 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+
+function CuentaIcon(props: any) {
+  const classes = useStyles();
+
+  return (
+    <span>
+      {props.icon === "Home" &&
+        <HomeIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "Store" &&
+        <StoreIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "Storefront" &&
+        <StorefrontIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "DirectionsCar" &&
+        <DirectionsCarIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "DirectionsBike" &&
+        <DirectionsBikeIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "DirectionsBus" &&
+        <DirectionsBusIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "FormartListNumberd" &&
+        <FormatListNumberedIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "FeaturedVideo" &&
+        <FeaturedVideoIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "DeleteSweep" &&
+        <DeleteSweepIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "Domain" &&
+        <DomainIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+
+      {props.icon === "LocalTaxi" &&
+        <LocalTaxiIcon className={classes.icon} fontSize={props.size} color="secondary" />
+      }
+    </span>
+  )
+}
+
+
+
 function CuentaListItem(props: any) {
   const classes = useStyles();
 
@@ -52,56 +107,18 @@ function CuentaListItem(props: any) {
     <Paper className={classes.root}>
       <Button fullWidth className={classes.button} component={RouterLink} to="/objeto" state={{ cuenta: props.cuenta }}>
         <Grid container item xs={12} spacing={2} className={classes.item}>
-          <Grid item xs={1}>
-            {props.cuenta?.icon === "Home" &&
-              <HomeIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "Store" &&
-              <StoreIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "Storefront" &&
-              <StorefrontIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "DirectionsCar" &&
-              <DirectionsCarIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "DirectionsBike" &&
-              <DirectionsBikeIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "DirectionsBus" &&
-              <DirectionsBusIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "FormartListNumberd" &&
-              <FormatListNumberedIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "FeaturedVideo" &&
-              <FeaturedVideoIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "DeleteSweep" &&
-              <DeleteSweepIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "Domain" &&
-              <DomainIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-            {props.cuenta?.icon === "LocalTaxi" &&
-              <LocalTaxiIcon className={classes.icon} fontSize="large" color="secondary" />
-            }
-
-          </Grid>
+          <Hidden xsDown>
+            <Grid item xs={1}>
+              <CuentaIcon icon={props.cuenta.icon} size="large"/>
+            </Grid>
+          </Hidden>
 
           <Grid item xs={7}>
             <Grid container spacing={0}>
               <Grid item xs={12}>
+                <Hidden smUp>
+                  <CuentaIcon icon={props.cuenta.icon} size="large"/>
+                </Hidden>
                 <Typography display="block" variant="caption">{props.cuenta?.subtitulo}</Typography>
                 <Typography display="inline" variant="subtitle2">{props.cuenta?.titulo}</Typography>
                 <Typography display="inline" variant="body2"> &nbsp;&nbsp; {props.cuenta?.domicilio}</Typography>
