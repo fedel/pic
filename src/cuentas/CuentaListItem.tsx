@@ -52,47 +52,47 @@ function CuentaIcon(props: any) {
   return (
     <span>
       {props.icon === "Home" &&
-        <HomeIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <HomeIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "Store" &&
-        <StoreIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <StoreIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "Storefront" &&
-        <StorefrontIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <StorefrontIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "DirectionsCar" &&
-        <DirectionsCarIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <DirectionsCarIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "DirectionsBike" &&
-        <DirectionsBikeIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <DirectionsBikeIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "DirectionsBus" &&
-        <DirectionsBusIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <DirectionsBusIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "FormartListNumberd" &&
-        <FormatListNumberedIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <FormatListNumberedIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "FeaturedVideo" &&
-        <FeaturedVideoIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <FeaturedVideoIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "DeleteSweep" &&
-        <DeleteSweepIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <DeleteSweepIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "Domain" &&
-        <DomainIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <DomainIcon className={classes.icon} fontSize={props.size}  />
       }
 
       {props.icon === "LocalTaxi" &&
-        <LocalTaxiIcon className={classes.icon} fontSize={props.size} color="secondary" />
+        <LocalTaxiIcon className={classes.icon} fontSize={props.size} />
       }
     </span>
   )

@@ -72,7 +72,7 @@ function LicenciaList(props: any) {
                   icon: "LocalTaxi",
                   titulo: "LTR 8297",
                   domicilio: "Santa Fe 892 - Rosario",
-                  subtitulo: "Comercio",
+                  subtitulo: "Licencia Taxi y Remises",
                   titular: "Federico Luna (33245887340)",
                   campoRel0: "VENCE",
                   valorRel0: "2023/10/11",

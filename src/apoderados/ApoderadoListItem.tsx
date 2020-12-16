@@ -41,7 +41,7 @@ function ApoderadoListItem(props: any) {
         <Button fullWidth className={classes.button}>
           <Grid container item xs={12} spacing={2} className={classes.item}>
             <Grid item xs={1}>
-              <SupervisedUserCircleIcon className={classes.icon} fontSize="large" color="secondary"/>
+              <SupervisedUserCircleIcon className={classes.icon} fontSize="large" />
             </Grid>
 
             <Grid item xs={6}>

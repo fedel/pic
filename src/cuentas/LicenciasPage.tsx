@@ -36,7 +36,7 @@ function LicenciasPage(props: any) {
         <Container className={classes.container}>
             <Toolbar>
                 <Typography component="div" variant="h5" color="inherit" noWrap className={classes.title}>
-                    Tus Bienes
+                    Licencias y Permisos
                 </Typography>
             </Toolbar>
             <Grid container spacing={0} direction="row-reverse">
@@ -44,13 +44,13 @@ function LicenciasPage(props: any) {
                     <Grid item md={4}>
                         <Typography component="h1" variant="h6" color="inherit" noWrap></Typography>
                         <Box>
-                            <Button color="secondary" startIcon={<Map/>}>Opción rápida 1</Button>
+                            <Button  startIcon={<Map/>}>Opción rápida 1</Button>
                         </Box>
                         <Box>
-                            <Button component={ RouterLink } to="/datasets/new" color="secondary" startIcon={<Folder/>}>Algo rápida 2</Button>
+                            <Button component={ RouterLink } to="/datasets/new"  startIcon={<Folder/>}>Algo rápida 2</Button>
                         </Box>
                         <Box>
-                            <Button color="secondary" startIcon={<Help/>}>Ayuda</Button>
+                            <Button  startIcon={<Help/>}>Ayuda</Button>
                         </Box>
                     </Grid>
                 </Hidden>

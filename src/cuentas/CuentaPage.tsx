@@ -107,14 +107,14 @@ function EjemploOPTgi(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>PAGAR SALDO COMPLETO</b></Typography></p>
-                            <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">603,34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button variant="contained" color="secondary">Pagar ...</Button></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>PAGAR PERIODO ACTUAL</b></Typography></p>
+                            <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">603,34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button variant="contained" >Pagar ...</Button></Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Paga todas las deudas pendientes de la cuenta.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle</Link></Typography></p>
                         </Grid>
                         <Grid item sm={2} className={classes.smOff}>
                             <p style={{ marginTop: 4 }}><Typography variant="h6">403,14</Typography></p>
-                            <p><Button variant="contained" color="secondary">Pagar ...</Button></p>
+                            <p><Button variant="contained" >Pagar ...</Button></p>
                         </Grid>
                     </Grid>
                 </Container>
@@ -130,7 +130,7 @@ function EjemploOPTgi(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>PAGAR SOLO DEUDA VENCIDA</b></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>PAGAR TODOS LOS PERIODOS VENCIDOS</b></Typography></p>
                             <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">403,14</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Paga todas las deudas que ya estan vencidas.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle</Link></Typography></p>
@@ -152,7 +152,7 @@ function EjemploOPTgi(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>REALIZAR CONVENIO</b></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>REALIZAR CONVENIO WEB</b></Typography></p>
                             <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">403,14</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Realizar un convenio y pagar en cuotas la deuda antigua.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle de las cuotas</Link></Typography></p>
@@ -175,7 +175,7 @@ function EjemploOPTgi(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>PAGO ANTICIPADO</b></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>PAGO ANTICIPADO</b></Typography></p>
                             <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">6204,14</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Pagar por adelantado el resto del año con un descuento.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle</Link></Typography></p>
@@ -185,6 +185,16 @@ function EjemploOPTgi(props: any) {
                             <p></p>
                         </Grid>
                     </Grid>
+                </Container>
+                <p></p>
+                <Container>
+                    <Typography variant="h5" className={classes.title}>Otras Opciones</Typography>
+                    <p style={{ textAlign: "left" }}>
+                        <span>
+                            <Button variant="outlined"  style={{ marginBottom: 18, marginRight: 18 }}>Elegir deuda a pagar</Button>
+                            <Button variant="outlined"  style={{ marginBottom: 18, marginRight: 18 }}>Generar un plan de pagos</Button>
+                        </span>
+                    </p>
                 </Container>
                 <p>&nbsp;</p>
             </Paper>
@@ -213,14 +223,14 @@ function EjemploOPConvenio(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>PAGAR PENDIENTE AL DÍA DE HOY</b></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>PAGAR PENDIENTE AL DÍA DE HOY</b></Typography></p>
                             <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">401,20</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Paga todas las cuotas atrasadas y la del periodo acutal.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle</Link></Typography></p>
                         </Grid>
                         <Grid item xs={2} className={classes.smOff}>
                             <p style={{ marginTop: 4 }}><Typography variant="h6">401,20</Typography></p>
-                            <p><Button variant="contained" color="secondary">Pagar ...</Button></p>
+                            <p><Button variant="contained" >Pagar ...</Button></p>
                         </Grid>
                     </Grid>
                 </Container>
@@ -236,7 +246,7 @@ function EjemploOPConvenio(props: any) {
                             />
                         </Grid>
                         <Grid item xs={9} sm={8} md={6}>
-                            <p style={{ marginTop: 10 }}><Typography variant="body1" color="secondary"><b>PAGAR CUOTAS ATRASADAS</b></Typography></p>
+                            <p style={{ marginTop: 10 }}><Typography variant="body1" ><b>PAGAR CUOTAS ATRASADAS</b></Typography></p>
                             <p className={classes.xsOnly} style={{ marginTop: 4 }}><Typography variant="h6">363,14</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1">Paga todas las cuptas que ya estan vencidas.</Typography></p>
                             <p style={{ margin: 0 }}><Typography variant="body1"><Link to="">Ver detalle</Link></Typography></p>
@@ -283,7 +293,7 @@ function CuentaPage(props: any) {
                                 <p style={{ textAlign: "right" }}>
                                     {opic.acciones.filter(accion => accion.seccion === "Objeto").map(accion =>
                                         <span>
-                                            <Button variant="outlined" color="secondary" style={{ marginBottom: 18, marginRight: 18 }}>{accion.titulo}</Button>
+                                            <Button variant="outlined"  style={{ marginBottom: 18, marginRight: 18 }}>{accion.titulo}</Button>
                                         </span>
                                     )}
                                 </p>
@@ -304,7 +314,7 @@ function CuentaPage(props: any) {
                                 <p style={{ textAlign: "right" }}>
                                     {opic.acciones.filter(accion => accion.seccion === "Relacion").map(accion =>
                                         <span>
-                                            <Button variant="outlined" color="secondary" style={{ marginBottom: 18, marginRight: 18 }}>{accion.titulo}</Button>
+                                            <Button variant="outlined"  style={{ marginBottom: 18, marginRight: 18 }}>{accion.titulo}</Button>
                                         </span>
                                     )}
                                 </p>
@@ -314,7 +324,7 @@ function CuentaPage(props: any) {
                 </Grid>
 
                 <br></br>
-                {opic.titulo.startsWith("TGI") && <EjemploOPTgi />}
+                {opic.titulo.startsWith("TGI") && <EjemploOPTgi/>}
                 {opic.titulo.startsWith("CVP") && <EjemploOPConvenio />}
 
             </Container>

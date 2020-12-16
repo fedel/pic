@@ -132,7 +132,7 @@ function LoginPage(props: any) {
             <div className={classes.row}>
                 <Button>Olvido su contraseña</Button>
                 <div className={classes.separator}>&nbsp;</div>
-                <Button color="secondary" variant="contained" onClick={handleLogin}>Ingresar</Button>
+                <Button  variant="contained" onClick={handleLogin}>Ingresar</Button>
             </div>
         </div>
     );

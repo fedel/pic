@@ -47,10 +47,10 @@ function ApoderadosPage(props: any) {
                         </Toolbar>
                         <Typography component="h1" variant="h6" color="inherit" noWrap></Typography>
                         <Box>
-                            <Button color="secondary" startIcon={<WorkIcon/>}>Solicitar Facultad</Button>
+                            <Button  startIcon={<WorkIcon/>}>Solicitar Facultad</Button>
                         </Box>
                         <Box>
-                            <Button color="secondary" startIcon={<Help/>}>Ayuda</Button>
+                            <Button  startIcon={<Help/>}>Ayuda</Button>
                         </Box>
                     </Grid>
                 </Hidden>
@@ -68,10 +68,10 @@ function ApoderadosPage(props: any) {
                                 <Button variant="contained" color="primary" startIcon={<PersonIcon/>}>Ciudadano</Button>
                             </Grid>
                             <Grid item xs={2}>
-                                <Button variant="contained" color="secondary" startIcon={<PersonIcon/>}>Arquitecto</Button>
+                                <Button variant="contained"  startIcon={<PersonIcon/>}>Arquitecto</Button>
                             </Grid>
                             <Grid item xs={2}>
-                                <Button variant="contained" color="secondary" startIcon={<AddIcon/>}>Solictar</Button>
+                                <Button variant="contained"  startIcon={<AddIcon/>}>Solictar</Button>
                             </Grid>
                         </Grid>
                     </Container>
@@ -84,7 +84,7 @@ function ApoderadosPage(props: any) {
                     type="text"
                     label="Buscar"
                     />
-                        <IconButton className={classes.iconButton} color="secondary"
+                        <IconButton className={classes.iconButton} 
                                     aria-label="buscar dataset" component="span">
                             <SearchIcon/>
                         </IconButton>

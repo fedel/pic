@@ -14,6 +14,13 @@ import ApoderadosPage from './apoderados/ApoderadosPage';
 import CuentaPage from './cuentas/CuentaPage';
 import BienesPage from './cuentas/BienesPage';
 import LicenciasPage from './cuentas/LicenciasPage';
+import WebLayout from './layout/WebLayout';
+import WebHomePage from './web/WebHomePage';
+import WebBuscarPage from './web/WebBuscarPage';
+import WebTramitePage1 from './web/WebTramitePage1';
+import WebRequisitoPage1 from './web/WebRequisitoPage1';
+import WebRequisitoPage2 from './web/WebRequisitoPage2';
+import WebLoginPage from './web/WebLoginPage';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -66,6 +73,24 @@ export default function App() {
           <LoginPage default path="/auth/login"/>
         </Router>
     </LoginLayout>
+
+
+  const isWeb = window.location.href.indexOf("/web/") > 0;
+  const web =
+    <WebLayout>
+        <Router>
+          <WebHomePage default path="/web/home"/>
+          <WebBuscarPage path="/web/buscar"/>
+          <WebTramitePage1 path="/web/tramite-1"/>
+          <WebRequisitoPage1 path="/web/requisito-1"/>
+          <WebRequisitoPage2 path="/web/requisito-2"/>
+          <WebLoginPage path="/web/login"/>
+        </Router>
+    </WebLayout>
+
+  if (isWeb) {
+    return web;
+  }
 
   if (logged) {
     return full;

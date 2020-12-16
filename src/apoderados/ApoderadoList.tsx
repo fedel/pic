@@ -33,7 +33,7 @@ function ApoderadosList(props: any) {
           <Container>
             <div style={{marginBottom:14}}>
               <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-                <Button color="secondary">Todos</Button>
+                <Button >Todos</Button>
                 <Button>Otorgados por Mi</Button>
                 <Button>Otorgados a Mi</Button>
               </ButtonGroup>

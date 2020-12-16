@@ -37,7 +37,7 @@ function CuentaList(props: any) {
                   ],
                   
                   acciones: [
-                    { codigo: "", seccion: "Objeto", titulo:"Gestionar Libre Deuda" },
+                    { codigo: "", seccion: "Objeto", titulo:"Gestionar Libre Deuda", link:"" },
                     { codigo: "", seccion: "Objeto", titulo:"Adhesión Boleta Digital" },
                     { codigo: "", seccion: "Objeto", titulo:"Más..." },
 
