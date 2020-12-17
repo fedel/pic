@@ -1,12 +1,10 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    container: {
-        maxWidth: "unset",
-        padding: 0,
-        
+    container: {        
+        padding: 0,        
     },
     container2: {
         padding: 0,
@@ -25,21 +23,27 @@ const useStyles = makeStyles((theme: Theme) =>
 function WebLayout(props: any) {
     const classes = useStyles();
 
+    const isLogged = window.sessionStorage.getItem("logged") === "true";
+
     return (
         <Container className={classes.container}>
-            <Grid container spacing={1} className={classes.header}>
-                <Grid item xs={2}>
-                    [logo]
+            <Paper className={classes.paper} elevation={0}>
+                <Grid container spacing={1} className={classes.header}>
+                    <Grid item xs={2}>
+                        [logo]
+                    </Grid>
+                    <Grid item xs={8} style={{textAlign: "center"}}>
+                        <Typography variant="h3">
+                            <Link href="/pic/web/home">Municipalidad de Rosario</Link>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={2} style={{textAlign: "right"}}>
+                        {isLogged && 
+                            <p>Usuario</p>
+                        }
+                    </Grid>
                 </Grid>
-                <Grid item xs={8} style={{textAlign: "center"}}>
-                    <Typography variant="h3">
-                        Municipalidad de Rosario
-                    </Typography>
-                </Grid>
-                <Grid item xs={2} style={{textAlign: "right"}}>
-                    
-                </Grid>
-            </Grid>
+            </Paper>
             
             <Container className={classes.container2}>
                 <Paper className={classes.paper}>

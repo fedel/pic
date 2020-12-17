@@ -31,7 +31,7 @@ function WebHomePage(props: any) {
             <div>
             <form noValidate autoComplete="off" >
               <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{width: "420px"}}/>
-              <Button color="primary" variant="contained" style={{height: 56}} component={RouterLink} to="/web/buscar">Buscar</Button>
+              <Button color="primary" variant="contained" style={{height: 56}} href="/pic/web/buscar">Buscar</Button>
             </form>
             </div>
 

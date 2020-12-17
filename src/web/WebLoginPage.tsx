@@ -21,20 +21,17 @@ const useStyles = makeStyles((theme: Theme) =>
 function WebLoginPage(props: any) {
     const classes = useStyles();
 
+    function login() {
+      window.sessionStorage.setItem("logged", "true");
+      window.location.href = "/pic/tramites/tramite-1/inicio";
+    }
+
     return (
         <Container className={classes.container}>
           <Paper className={classes.paper}>
             <p><Typography variant="body1">Seccion 1 / Sub Seccion 2 / Trámite 1 / Login</Typography></p>
             
             <p><Typography variant="h3">Ingreso</Typography></p>
-
-            <p>
-              <Typography variant="h6">Registra tu clave Ciudadana</Typography>
-              <p>
-                <Button color="primary" variant="contained">REGISTRARSE</Button>
-                <Button variant="text">OLVIDO SU CONTRASEÑA</Button>
-              </p>
-            </p>
 
             <p>
               <Typography variant="h6">Clave de la ciudad.</Typography>
@@ -46,13 +43,21 @@ function WebLoginPage(props: any) {
                 <TextField id="outlined-basic" label="Clave" variant="filled" style={{width: "280px"}}/>
                 </p>
                 </form>
-                <Button color="primary" variant="contained" component={RouterLink} to="/tramites/tramite-1/inicio">INGRESAR</Button>
+                <Button color="primary" variant="contained" onClick={login}>INGRESAR</Button>
             </p>
 
             <p>
               <Typography variant="h6">Ingresa con claves externas</Typography>
               <p>
                 <Button color="primary" variant="contained">AUTENTICAR AFIP</Button>
+              </p>
+            </p>
+
+            <p>
+              <Typography variant="h6">Registra tu clave Ciudadana</Typography>
+              <p>
+                <Button color="primary" variant="contained">REGISTRARSE</Button>
+                <Button variant="text">OLVIDO SU CONTRASEÑA</Button>
               </p>
             </p>
 

@@ -31,7 +31,7 @@ function LoginLayout(props: any) {
 
     function modoWeb() {
         window.sessionStorage.setItem("mode", "web");
-        window.location.reload();
+        window.location.href="/pic/web/home";
     }
 
     return (

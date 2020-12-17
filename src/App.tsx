@@ -82,13 +82,13 @@ export default function App(props: any) {
   const web =
     <WebLayout>
         <Router>
-          <WebHomePage default path="/web/home"/>
-          <WebBuscarPage path="/web/buscar"/>
-          <WebTramitePage1 path="/web/tramite-1"/>
-          <WebRequisitoPage1 path="/web/requisito-1"/>
-          <WebRequisitoPage2 path="/web/requisito-2"/>
-          <WebLoginPage path="/web/login"/>
-          <TramiteInicioPage1 path="/tramites/tramite-1/inicio"/>
+          <WebHomePage default path="/pic/web/home"/>
+          <WebBuscarPage path="/pic/web/buscar"/>
+          <WebTramitePage1 path="/pic/web/tramite-1"/>
+          <WebRequisitoPage1 path="/pic/web/requisito-1"/>
+          <WebRequisitoPage2 path="/pic/web/requisito-2"/>
+          <WebLoginPage path="/pic/web/login"/>
+          <TramiteInicioPage1 path="/pic/tramites/tramite-1/inicio"/>
         </Router>
     </WebLayout>
 

@@ -31,25 +31,25 @@ function WebTramitePage1(props: any) {
             </p>
 
             <p>
-              <Button color="primary" variant="contained" component={RouterLink} to="/web/login">COMENZAR TRÁMITE</Button>
+              <Button color="primary" variant="contained" component={RouterLink} to="/pic/web/login">COMENZAR TRÁMITE</Button>
             </p>
 
             <p><Typography variant="h4">Pasos previos</Typography></p>
             <p><Typography variant="body1">Para comenzar el trámite te solicitaremos</Typography></p>
             <div style={{paddingLeft: 16}}>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/tramite-1/datos-inicio">* Completar datos de inicio</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/libre-multa">* Libre de Multas</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/tramite-1/datos-inicio">* Completar datos de inicio</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/libre-multa">* Libre de Multas</Link></Typography></p>
             </div>
 
             <p><Typography variant="h4">Que te pedimos</Typography></p>
             <p><Typography variant="body1">Estos son los documentos o formulario que deberas completar.</Typography></p>
             <div style={{paddingLeft: 16}}>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-1">*  1</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-2">*  2</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-3">*  3</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-4">*  4</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-5">*  5</Link></Typography></p>
-            <p><Typography variant="body1"><Link component={RouterLink} to="/web/requisito-6">*  6</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-1">*  1</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-2">*  2</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-3">*  3</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-4">*  4</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-5">*  5</Link></Typography></p>
+            <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-6">*  6</Link></Typography></p>
             </div>
 
             <p><Typography variant="h4">Cuanto Sale</Typography></p>
