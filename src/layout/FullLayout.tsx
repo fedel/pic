@@ -348,19 +348,19 @@ function FullLayout(props: any) {
                     <ListSubheader component="div">
                       Tus ...
                     </ListSubheader>
-                    <ListItem button component={RouterLink} to="/cuentas" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/cuentas" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Cuentas"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/bienes" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/bienes" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Bienes"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/licencias" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/licencias" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Licencias y Permisos"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/cuentas" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/cuentas" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Inscripción / Beneficios / Prestaciones"/>
                     </ListItem>
@@ -368,22 +368,22 @@ function FullLayout(props: any) {
                     <ListSubheader component="div">
                       Gestiones
                     </ListSubheader>
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Infracciones y Pagos Voluntarios"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Sellados"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Trámites"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Reclamos"/>
                     </ListItem>
@@ -392,25 +392,25 @@ function FullLayout(props: any) {
                       Perifil
                     </ListSubheader>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Mis Datos"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Novedades"/>
                     </ListItem>
 
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Notificaciones"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/home" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/home" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Mis Documentos"/>
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/apoderados" onClick={handleDrawerClose}>
+                    <ListItem button component={RouterLink} to="/pic/apoderados" onClick={handleDrawerClose}>
                         <ListItemIcon><Home /></ListItemIcon>
                         <ListItemText primary="Gestionar a otra persona"/>
                     </ListItem>

@@ -56,7 +56,7 @@ export default function App(props: any) {
     
   const full =
       <FullLayout className={classes.layout}>
-        <Router>
+        <Router basepath={process.env.PUBLIC_URL}>
           <CuentasPage     path="/cuentas"/>
           <BienesPage      path="/bienes"/>
           <LicenciasPage   path="/licencias"/>
@@ -71,7 +71,7 @@ export default function App(props: any) {
 
   const login =
     <LoginLayout>
-        <Router>
+        <Router basepath={process.env.PUBLIC_URL}>
           <LoginPage default path="/auth/login"/>
         </Router>
     </LoginLayout>
@@ -81,14 +81,14 @@ export default function App(props: any) {
 
   const web =
     <WebLayout>
-        <Router>
-          <WebHomePage default path="/pic/web/home"/>
-          <WebBuscarPage path="/pic/web/buscar"/>
-          <WebTramitePage1 path="/pic/web/tramite-1"/>
-          <WebRequisitoPage1 path="/pic/web/requisito-1"/>
-          <WebRequisitoPage2 path="/pic/web/requisito-2"/>
-          <WebLoginPage path="/pic/web/login"/>
-          <TramiteInicioPage1 path="/pic/tramites/tramite-1/inicio"/>
+        <Router basepath={process.env.PUBLIC_URL}>
+          <WebHomePage default path="/web/home"/>
+          <WebBuscarPage path="/web/buscar"/>
+          <WebTramitePage1 path="/web/tramite-1"/>
+          <WebRequisitoPage1 path="/web/requisito-1"/>
+          <WebRequisitoPage2 path="/web/requisito-2"/>
+          <WebLoginPage path="/web/login"/>
+          <TramiteInicioPage1 path="/tramites/tramite-1/inicio"/>
         </Router>
     </WebLayout>
 

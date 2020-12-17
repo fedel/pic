@@ -105,7 +105,7 @@ function CuentaListItem(props: any) {
 
   return (
     <Paper className={classes.root}>
-      <Button fullWidth className={classes.button} component={RouterLink} to="/objeto" state={{ cuenta: props.cuenta }}>
+      <Button fullWidth className={classes.button} component={RouterLink} to="/pic/objeto" state={{ cuenta: props.cuenta }}>
         <Grid container item xs={12} spacing={2} className={classes.item}>
           <Hidden xsDown>
             <Grid item xs={1}>

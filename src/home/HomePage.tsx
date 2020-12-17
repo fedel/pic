@@ -39,7 +39,7 @@ function HomePage(props: any) {
                             <Button  startIcon={<Map/>}>Opción rápida 1</Button>
                         </Box>
                         <Box>
-                            <Button component={ RouterLink } to="/datasets/new"  startIcon={<Folder/>}>Algo rápida 2</Button>
+                            <Button component={ RouterLink } to="/pic/datasets/new"  startIcon={<Folder/>}>Algo rápida 2</Button>
                         </Box>
                         <Box>
                             <Button  startIcon={<Help/>}>Ayuda</Button>
