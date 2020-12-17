@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import FullLayout from './layout/FullLayout';
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
-import { Router, useLocation, useParams } from '@reach/router';
+import { navigate, Router, useLocation, useParams } from '@reach/router';
 import LoginLayout from './layout/LoginLayout';
 import LoginPage from './auth/LoginPage';
 import { useAppContext } from './AppContext';
@@ -21,6 +21,7 @@ import WebTramitePage1 from './web/WebTramitePage1';
 import WebRequisitoPage1 from './web/WebRequisitoPage1';
 import WebRequisitoPage2 from './web/WebRequisitoPage2';
 import WebLoginPage from './web/WebLoginPage';
+import TramiteInicioPage1 from './tramites/TramiteInicioPage1';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,9 +49,10 @@ function Copyright() {
   );
 }
 
-export default function App() {
+export default function App(props: any) {
   const classes = useStyles();
   const [logged] = useAuth();
+  // const location = useLocation();
     
   const full =
       <FullLayout className={classes.layout}>
@@ -74,8 +76,9 @@ export default function App() {
         </Router>
     </LoginLayout>
 
+  //const isWeb = window.location.href.indexOf("/web/") > 0;
+  const isWeb = window.sessionStorage.getItem("mode") === "web";
 
-  const isWeb = window.location.href.indexOf("/web/") > 0;
   const web =
     <WebLayout>
         <Router>
@@ -85,6 +88,7 @@ export default function App() {
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
+          <TramiteInicioPage1 path="/tramites/tramite-1/inicio"/>
         </Router>
     </WebLayout>
 

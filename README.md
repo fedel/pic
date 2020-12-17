@@ -5,16 +5,10 @@
     $ yarn install
     $ yarn start
 
-## Configuration
+## Desplegar
 
-- Set REACT_APP_BACKEND_URL in process environment. For example:
-        
-    $ export REACT_APP_BACKEND_URL="https://192.168.1.19:8090/"
-    
-IMPORTANT: Use a trailing slash
-
-
-
+   $ yarn build
+   $ yarn deploy
 
 
 # PIC: Plataforma Integrada del Ciudadano

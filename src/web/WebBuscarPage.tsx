@@ -3,6 +3,7 @@ import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container
 import Map from "@material-ui/icons/Map";
 import Folder from "@material-ui/icons/Folder";
 import Help from "@material-ui/icons/Help";
+import { Link as RouterLink, navigate } from "@reach/router"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -69,43 +70,43 @@ function WebBuscarPage(props: any) {
 
                 <div>
                   <p>
-                    <Typography variant="h6"><Link href="/web/tramite-1">Trámite 1</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="/web/tramite-1">Trámite 1</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Trámite 2</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Trámite 2</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Trámite 3</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Trámite 3</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Trámite 4</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Trámite 4</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Página 1</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Página 1</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Página 2</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Página 2</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
 
                   <p>
-                    <Typography variant="h6"><Link href="#">Trámite 7</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="#">Trámite 7</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>

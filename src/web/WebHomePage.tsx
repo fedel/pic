@@ -31,7 +31,7 @@ function WebHomePage(props: any) {
             <div>
             <form noValidate autoComplete="off" >
               <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{width: "420px"}}/>
-              <Button color="primary" variant="contained" style={{height: 56}} href="/web/buscar">Buscar</Button>
+              <Button color="primary" variant="contained" style={{height: 56}} component={RouterLink} to="/web/buscar">Buscar</Button>
             </form>
             </div>
 
@@ -41,22 +41,22 @@ function WebHomePage(props: any) {
           <Grid container spacing={4}>
               <Grid item xs={4} >
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 1</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 2</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 2</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 3</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 3</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 4</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 4</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
@@ -64,22 +64,22 @@ function WebHomePage(props: any) {
 
               <Grid item xs={4}>
               <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 1</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 2</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 2</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 3</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 3</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 4</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 4</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
@@ -87,22 +87,22 @@ function WebHomePage(props: any) {
 
               <Grid item xs={4}>
               <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 1</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 2</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 2</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 3</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 3</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link href="/web/navegar">Seccion 4</Link></Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Seccion 4</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
