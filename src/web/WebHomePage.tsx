@@ -52,70 +52,70 @@ function WebHomePage(props: any) {
           <Paper className={classes.paper}>
           <Grid container spacing={4}>
               <Grid item sm={12} md={4}>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+               <p>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Actividad económica, comercial y empleo</Link></Typography>
+                  <Typography variant="body2">Incluye habilitaciones, permisos y herramientas para el fortalecimiento de tu empresa o emprendimiento</Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 2</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Ciudad, cultura y turismo</Link></Typography>
+                  <Typography variant="body2">Visitas a espacios culturales. </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 3</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Deportes</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 4</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Educación</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
               </Grid>
 
               <Grid item sm={12} md={4}>
               <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Medioambiente y mantenimiento urbano</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 2</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Movilidad, transporte y tránsito</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 3</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación. transparencia e información pública</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 4</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Salud y bienestar</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
               </Grid>
 
               <Grid item sm={12} md={4}>
-              <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                <p>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Servicios sociales</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 2</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Tributos, multas y pagos</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 3</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Vivienda y construcción</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
                 <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 4</Link></Typography>
-                  <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
+                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Otros</Link></Typography>
+                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
                   <Divider></Divider>
                 </p>
               </Grid>
