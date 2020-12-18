@@ -86,7 +86,7 @@ function TramiteGestionPage1(props: any) {
             </p>
 
             <p>
-              <Button variant="contained">CERTIFICADOS</Button>
+              Aun no hay certificados emitios para este trámite.
             </p>
           </Paper>
 

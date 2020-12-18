@@ -23,8 +23,7 @@ function TramiteInicioExitoPage1(props: any) {
           <Paper className={classes.paper}>
             <p><Typography variant="body1">Seccion 1 / Sub Seccion 2 / Trámite 1 / Inicio</Typography></p>
             <p><Typography variant="h3">Trámite 1</Typography></p>
-            <p><Typography variant="h4">Solicitud en borrador</Typography></p>
-            <p><Typography variant="h4">Complete los requisitos</Typography></p>
+            <p><Typography variant="h4">OK. Solicitud en borrador. Complete los requisitos</Typography></p>
           </Paper>
 
           <Paper className={classes.paper}>

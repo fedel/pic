@@ -9,7 +9,7 @@ import { Link as RouterLink, navigate } from "@reach/router"
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
-        padding: 0,
+      padding: 0,
     },
     paper: {
       padding: theme.spacing(1),
@@ -19,120 +19,142 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 function WebHomePage(props: any) {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <Container className={classes.container}>
+  return (
+    <Container className={classes.container}>
 
-          <Paper className={classes.paper}>
+      <Paper className={classes.paper}>
 
-            <Grid container>
-              <Grid item sm={12} md={7}>
-                <form noValidate autoComplete="off" >
-                  <p><Typography variant="h4">Bienvenido a rosario.gob.ar</Typography></p>
-                  <p><Typography variant="body1">Buscá servicios, trámites y todo lo que necestias de la municipalidad.</Typography></p>
-                  <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{width: "420px"}}/>
-                  <Button color="primary" variant="contained" style={{height: 56}} component={RouterLink} to="/pic/web/buscar">Buscar</Button>
-                </form>
-                </Grid>
-              <Grid item sm={12} md={5}>
-                <p><Typography variant="h6">Sugeridos</Typography></p>
-                <Typography variant="body1">
-                  <p><Link>+ Link 1</Link></p>
-                  <p><Link>+ Link 2</Link></p>
-                  <p><Link>+ Link 3</Link></p>
-                  <p><Link>+ Link 4</Link></p>
-                  <p><Link>+ Link 5</Link></p>
-                </Typography>
-              </Grid>
+        <Grid container>
+          <Grid item sm={12} md={7}>
+            <form noValidate autoComplete="off" >
+              <p><Typography variant="h4">Bienvenido a rosario.gob.ar</Typography></p>
+              <p><Typography variant="body1">Buscá servicios, trámites y todo lo que necestias de la municipalidad.</Typography></p>
+              <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{ width: "420px" }} />
+              <Button color="primary" variant="contained" style={{ height: 56 }} component={RouterLink} to="/pic/web/buscar">Buscar</Button>
+            </form>
+          </Grid>
+          <Grid item sm={12} md={5}>
+            <p><Typography variant="h6">Sugeridos</Typography></p>
+            <Typography variant="body1">
+              <p><Link>+ Link 1</Link></p>
+              <p><Link>+ Link 2</Link></p>
+              <p><Link>+ Link 3</Link></p>
+              <p><Link>+ Link 4</Link></p>
+            </Typography>
+          </Grid>
 
-            </Grid>
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.paper}>
+        <Grid container>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Comercios y empleos</Link></Typography>
+              <Typography variant="body2">Incluye habilitaciones, permisos y herramientas para el fortalecimiento de tu empresa o emprendimiento</Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Ciudad, cultura y turismo</Link></Typography>
+              <Typography variant="body2">Visitas a espacios culturales. </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Deportes</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Medioambiente y mantenimiento</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Movilidad, transporte y tránsito</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación y transparencia</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Servicios sociales</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Tributos, multas y pagos</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Vivienda y construcción</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+        </Grid>
+
+        <Grid container>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Educación</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+          <Grid item sm={12} md={4}>
+            <p>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Otros</Link></Typography>
+              <Typography variant="body2">Esto es para navegar por la sección... </Typography>
+              <Divider></Divider>
+            </p>
+          </Grid>
+
+
+        </Grid>
+      </Paper>
+
+      <Paper className={classes.paper}>
+        otra...
           </Paper>
 
-          <Paper className={classes.paper}>
-          <Grid container spacing={4}>
-              <Grid item sm={12} md={4}>
-               <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Actividad económica, comercial y empleo</Link></Typography>
-                  <Typography variant="body2">Incluye habilitaciones, permisos y herramientas para el fortalecimiento de tu empresa o emprendimiento</Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Ciudad, cultura y turismo</Link></Typography>
-                  <Typography variant="body2">Visitas a espacios culturales. </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Deportes</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Educación</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-              </Grid>
-
-              <Grid item sm={12} md={4}>
-              <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Medioambiente y mantenimiento urbano</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Movilidad, transporte y tránsito</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación. transparencia e información pública</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Salud y bienestar</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-              </Grid>
-
-              <Grid item sm={12} md={4}>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Servicios sociales</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Tributos, multas y pagos</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Vivienda y construcción</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-                <p>
-                  <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Otros</Link></Typography>
-                  <Typography variant="body2">Esto es para navegar por la sección... </Typography>
-                  <Divider></Divider>
-                </p>
-              </Grid>
-
-            </Grid>
+      <Paper className={classes.paper}>
+        otra...
           </Paper>
 
-          <Paper className={classes.paper}>
-            otra...
-          </Paper>
+    </Container>
+  );
+}
 
-          <Paper className={classes.paper}>
-            otra...
-          </Paper>
-
-        </Container>
-    );
-  }
-  
 export default WebHomePage;
