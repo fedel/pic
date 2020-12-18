@@ -23,7 +23,6 @@ function WebLoginPage(props: any) {
 
     function login() {
       window.sessionStorage.setItem("logged", "true");
-      window.location.href = "/pic/tramites/tramite-1/inicio";
     }
 
     return (
@@ -43,7 +42,7 @@ function WebLoginPage(props: any) {
                 <TextField id="outlined-basic" label="Clave" variant="filled" style={{width: "280px"}}/>
                 </p>
                 </form>
-                <Button color="primary" variant="contained" onClick={login}>INGRESAR</Button>
+                <Button color="primary" variant="contained" onClick={login} component={RouterLink} to="/pic/tramites/tramite-1/inicio-titular">INGRESAR</Button>
             </p>
 
             <p>

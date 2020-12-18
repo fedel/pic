@@ -25,21 +25,33 @@ function WebHomePage(props: any) {
         <Container className={classes.container}>
 
           <Paper className={classes.paper}>
-            <p><Typography variant="h4">Bienvenido a rosario.gob.ar</Typography></p>
-            <p><Typography variant="body1">Buscá servicios, trámites y todo lo que necestias de la municipalidad.</Typography></p>
 
-            <div>
-            <form noValidate autoComplete="off" >
-              <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{width: "420px"}}/>
-              <Button color="primary" variant="contained" style={{height: 56}} href="/pic/web/buscar">Buscar</Button>
-            </form>
-            </div>
+            <Grid container>
+              <Grid item sm={12} md={7}>
+                <form noValidate autoComplete="off" >
+                  <p><Typography variant="h4">Bienvenido a rosario.gob.ar</Typography></p>
+                  <p><Typography variant="body1">Buscá servicios, trámites y todo lo que necestias de la municipalidad.</Typography></p>
+                  <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{width: "420px"}}/>
+                  <Button color="primary" variant="contained" style={{height: 56}} component={RouterLink} to="/pic/web/buscar">Buscar</Button>
+                </form>
+                </Grid>
+              <Grid item sm={12} md={5}>
+                <p><Typography variant="h6">Sugeridos</Typography></p>
+                <Typography variant="body1">
+                  <p><Link>+ Link 1</Link></p>
+                  <p><Link>+ Link 2</Link></p>
+                  <p><Link>+ Link 3</Link></p>
+                  <p><Link>+ Link 4</Link></p>
+                  <p><Link>+ Link 5</Link></p>
+                </Typography>
+              </Grid>
 
+            </Grid>
           </Paper>
 
           <Paper className={classes.paper}>
           <Grid container spacing={4}>
-              <Grid item xs={4} >
+              <Grid item sm={12} md={4}>
                 <p>
                   <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
@@ -62,7 +74,7 @@ function WebHomePage(props: any) {
                 </p>
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid item sm={12} md={4}>
               <p>
                   <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>
@@ -85,7 +97,7 @@ function WebHomePage(props: any) {
                 </p>
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid item sm={12} md={4}>
               <p>
                   <Typography variant="h6"><Link component={RouterLink} to="/pic/web/navegar">Seccion 1</Link></Typography>
                   <Typography variant="subtitle1">Esto es para navegar por la sección... </Typography>

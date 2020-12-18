@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,7 +26,7 @@ function WebLayout(props: any) {
     const isLogged = window.sessionStorage.getItem("logged") === "true";
 
     return (
-        <Container className={classes.container}>
+        <Container className={classes.container} maxWidth="md">
             <Paper className={classes.paper} elevation={0}>
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
@@ -34,7 +34,7 @@ function WebLayout(props: any) {
                     </Grid>
                     <Grid item xs={8} style={{textAlign: "center"}}>
                         <Typography variant="h3">
-                            <Link href="/pic/web/home">Municipalidad de Rosario</Link>
+                            <Link href="/pic">Municipalidad de Rosario</Link>
                         </Typography>
                     </Grid>
                     <Grid item xs={2} style={{textAlign: "right"}}>
@@ -43,9 +43,21 @@ function WebLayout(props: any) {
                         }
                     </Grid>
                 </Grid>
+                {isLogged && 
+                    <Paper elevation={0}>
+                        <p style={{textAlign: "center"}}>
+                            <Button color="primary">Registros</Button>
+                            <Button color="primary">Trámites</Button>
+                            <Button color="primary">Notificaciones</Button>
+                            <Button color="primary">Documentos</Button>
+                            <Button color="primary">Datos Personales</Button>
+                        </p>
+                    </Paper>
+                }
             </Paper>
             
             <Container className={classes.container2}>
+
                 <Paper className={classes.paper}>
                     <p><Typography color="primary" variant="h6">COVID19: Conocé los síntomas, cómo cuidarte, preguntas frecuentes, normativa relacionada.</Typography></p>
                 </Paper>

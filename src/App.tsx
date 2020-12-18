@@ -21,7 +21,12 @@ import WebTramitePage1 from './web/WebTramitePage1';
 import WebRequisitoPage1 from './web/WebRequisitoPage1';
 import WebRequisitoPage2 from './web/WebRequisitoPage2';
 import WebLoginPage from './web/WebLoginPage';
-import TramiteInicioPage1 from './tramites/TramiteInicioPage1';
+import TramiteInicioTitularPage1 from './tramites/TramiteInicioTitularPage1';
+import TramiteInicioDatosPage1 from './tramites/TramiteInicioDatosPage1';
+import TramiteInicioExitoPage1 from './tramites/TramiteInicioExitoPage1';
+import TramiteEnvioPage1 from './tramites/TramiteEnvioPage1';
+import TramiteGestionarPage1 from './tramites/TramiteGestionPage1';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -88,7 +93,11 @@ export default function App(props: any) {
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
-          <TramiteInicioPage1 path="/tramites/tramite-1/inicio"/>
+          <TramiteInicioTitularPage1 path="/tramites/tramite-1/inicio-titular"/>
+          <TramiteInicioDatosPage1 path="/tramites/tramite-1/inicio-datos"/>
+          <TramiteInicioExitoPage1 path="/tramites/tramite-1/inicio-exito"/>
+          <TramiteGestionarPage1 path="/tramites/tramite-1/gestion"/>
+          <TramiteEnvioPage1 path="/tramites/tramite-1/envio"/>
         </Router>
     </WebLayout>
 

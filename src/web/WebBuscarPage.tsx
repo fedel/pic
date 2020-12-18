@@ -33,7 +33,7 @@ function WebBuscarPage(props: any) {
             </div>
 
             <Grid container spacing={4}>
-              <Grid item xs={3} >
+              <Grid item md={3} sm={12}>
                 <p><Typography variant="h6">+ Filtro por tópicos</Typography></p>
                 <p style={{paddingLeft: 16}}>
                   <Typography variant="body1">+ Covid 19</Typography>
@@ -52,7 +52,6 @@ function WebBuscarPage(props: any) {
                   <Typography variant="body1">+ Noticias y Comunicados</Typography>
                   <Typography variant="body1">+ Ordenanzas y Regulaciones</Typography>
                   <Typography variant="body1">+ Estadisticas</Typography>
-                  <Typography variant="body1">+ Requisitos</Typography>
                   <Typography variant="body1">+ ...</Typography>
                 </p>
 
@@ -64,7 +63,7 @@ function WebBuscarPage(props: any) {
                 </p>
               </Grid>
 
-              <Grid item xs={9}>
+              <Grid item md={9} sm={12}>
                 <p><Typography variant="h6">406 Resultados</Typography></p>
                 <Divider></Divider>
 
@@ -110,7 +109,6 @@ function WebBuscarPage(props: any) {
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>
-
                 </div>
 
                 <div>
