@@ -24,21 +24,21 @@ function WebRequisitoPage2(props: any) {
           <Paper className={classes.paper}>
             <p><Typography variant="body1">Requisitos / Requisito 2</Typography></p>
             
-            <p><Typography variant="h3">Requisito 2</Typography></p>
+            <p><Typography variant="h3">Certificado Único de Discapacidad (CUD)</Typography></p>
 
             <p>
-              <Typography variant="body1">A esta especie es común verla posada sobre postes de alambrados, en lagunas de poca profundidad, siempre cerca o sobre el agua. Es un residente permanente, pudiendo algunas poblaciones migrar al norte, durante el invierno del Hemisferio Sur.
-              Su dieta consiste principalmente de peces pequeños, pero también come renacuajos, ranas e insectos acuáticos. Este cormorán busca alimento zambulléndose debajo del agua, mientras se propulsa con sus patas. Suele alimentarse en grupos.
+              <Typography variant="body1">El Certificado Único de Discapacidad (CUD) es un documento que acredita plenamente la discapacidad en todo el territorio nacional, en cualquier circunstancia en que sea necesario invocarla. Tiene igual valor que el Documento Nacional de Identidad, por lo que, ante su pérdida, debe efectuarse la denuncia inmediata.
+              + Info (link?)
               </Typography>
             </p>
 
             <p><Typography variant="h4">Que pedimos</Typography></p>
-            <p><Typography variant="body1">Deberas adjuntar el informe anualizado de estado en la AFIP.</Typography></p>
+            <p><Typography variant="body1">Adjuntar el CUD emitido por la Junta Evaluadora de Personas con Discapacidad.</Typography></p>
             <p><Typography variant="body1">...</Typography></p>
             <p><Typography variant="body1">...</Typography></p>
 
             <p><Typography variant="h4">Como se completa</Typography></p>
-            <p><Typography variant="body1">El documento se obtiene en la pagina de Afip llendo a...</Typography></p>
+            <p><Typography variant="body1">Adjuntar el certificado (PDF).</Typography></p>
             <p><Typography variant="body1">...</Typography></p>
             <p><Typography variant="body1">...</Typography></p>
 

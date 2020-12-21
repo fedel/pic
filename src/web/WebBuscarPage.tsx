@@ -69,7 +69,7 @@ function WebBuscarPage(props: any) {
 
                 <div>
                   <p>
-                    <Typography variant="h6"><Link component={RouterLink} to="/pic/web/tramite-1">Trámite 1</Link></Typography>
+                    <Typography variant="h6"><Link component={RouterLink} to="/pic/web/tramite-1">Libre estacionamiento para personas con discapacidad</Link></Typography>
                     <Typography variant="subtitle1">Use este trámite es para... </Typography>
                     <Divider></Divider>
                   </p>

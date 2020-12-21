@@ -51,7 +51,7 @@ function WebTramitePage1(props: any) {
 
             <div style={{paddingLeft: 16}}>
               <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-1">* Documento de Identidad del beneficiario del CUD.</Link></Typography></p>
-              <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-2">* Certificado Único de Discapacidad emitido por la Junta Evaluadora de Discapacidad.</Link></Typography></p>
+              <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-2">* Certificado Único de Discapacidad (CDU) emitido por la Junta Evaluadora de Discapacidad.</Link></Typography></p>
             </div>
 
             <p><Typography variant="h4">¿Cuánto sale?</Typography></p>
