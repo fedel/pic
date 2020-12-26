@@ -1,7 +1,6 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link } from "@material-ui/core";
-import { Link as RouterLink, navigate } from "@reach/router"
-
+import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Radio, FormControl, FormLabel, RadioGroup, FormControlLabel } from "@material-ui/core";
+import { Link as RouterLink, useNavigate } from "@reach/router"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,20 +17,58 @@ const useStyles = makeStyles((theme: Theme) =>
 function TramiteInicioTitularPage1(props: any) {
     const classes = useStyles();
 
+    const [titular, setTitular] = React.useState('titular');
+    const navigate = useNavigate();
+    
+    const handleTitular = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setTitular((event.target as HTMLInputElement).value);
+    };
+
+    const siguiente = () => {
+      if (titular === "yo") {
+        navigate("/pic/tramites/tramite-1/inicio-chequeo-1")
+      } else if (titular === "familiar") {
+        navigate("/pic/tramites/tramite-1/inicio-familiar")
+      } else {
+        alert("No implementado")
+      }
+    };
+
     return (
         <Container className={classes.container}>
           <Paper className={classes.paper}>
-            <p><Typography variant="body1">Seccion 1 / Sub Seccion 2 / Trámite 1 / Inicio</Typography></p>
-            <p><Typography variant="h3">Libre estacionamiento para personas con discapacidad</Typography></p>
+            <p>
+              <Typography variant="h4">Para quien es el trámite?</Typography>
+            </p>
+            <p>
+              <Typography variant="body1">Indicar quien es el beneficiario, titular o a quien esta destinado el trámite.</Typography>
+            </p>
+
+            <div style={{paddingLeft: 16}}>
+              <FormControl component="fieldset">
+                <FormLabel component="legend"></FormLabel>
+                <RadioGroup aria-label="titular1" name="titular1" value={titular} onChange={handleTitular}>
+                  <FormControlLabel value="yo" control={<Radio />} label="Es para mí (FEDERICO LUNA, CUIL 20245868430)"/>
+                  <div>Te pediremos una foto de tu DNI y deberan coincidir con tus datos de perfil <Link href="#">(ver tus datos).</Link></div>
+                  <p></p>
+                  <FormControlLabel value="familiar" control={<Radio />} label="Es para un familiar" />
+                  Te pediremos una foto del DNI de tu familiar
+                  <p></p>
+                  <FormControlLabel value="apoderado" control={<Radio />} label="Es para un apoderado" />
+                  Te pediremos...
+                  <p></p>
+                  
+                </RadioGroup>
+              </FormControl>
+            </div>
+
+            <p>
+              <Button color="primary" variant="contained" onClick={siguiente}>SIGUIENTE</Button>
+            </p>
           </Paper>
 
-          <Paper className={classes.paper}>
-            <p>
-              <Typography variant="h5">Titular y Solicitante</Typography>
-            </p>
-            <p>
-              <Typography variant="body1">Verificá que los datos sean correctos.</Typography>
-            </p>
+{
+  /*
 
             <p>
               <Typography variant="subtitle2">Solicitante</Typography>
@@ -93,14 +130,11 @@ function TramiteInicioTitularPage1(props: any) {
             </p>
           </Paper>
 
-          <Paper className={classes.paper}>
-              <p>
-                <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/inicio-datos">SIGUIENTE</Button>
-              </p>
-          </Paper>
+*/ 
+}
+
 
         </Container>
-
     );
   }
   

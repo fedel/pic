@@ -22,12 +22,11 @@ function WebTramitePage1(props: any) {
           <Paper className={classes.paper}>
             <p><Typography variant="body2">Seccion 1 / Sub Seccion 2 / Trámite 1</Typography></p>
             
-            <p><Typography variant="h3">Libre estacionamiento para personas con discapacidad</Typography></p>
+            <p><Typography variant="h3">Libre stacionamiento para personas con discapacidad</Typography></p>
             <p>
               <Typography variant="body1">Franquicia que se otorga a personas con discapacidad que padezcan alteraciones que reduzcan considerablemente su movilidad. La franquicia es respecto a la persona y por lo tanto transferible al vehículo en el que se movilice. Habilita a estacionar en sectores tarifados de manera gratuita.
               </Typography>
             </p>
-
 
             <p>
               <Button color="primary" variant="contained" component={RouterLink} to="/pic/web/login">COMENZAR TRÁMITE</Button>
@@ -42,12 +41,15 @@ function WebTramitePage1(props: any) {
             </div>
             */}
           
-            <p><Typography variant="h4">¿Cuáles son los requisitos?</Typography></p>
+            <p><Typography variant="h4">Requisitos</Typography></p>
 
             <div style={{paddingLeft: 16}}>
-              <p><Typography variant="body1">* Tener domicilio en la ciudad de Rosario.</Typography></p>
+              <p><Typography variant="body1">* Tener domicilio en la ciudad de Rosario</Typography></p>
+              <p><Typography variant="body1">* Tener el Certificado Único de Discapacidad</Typography></p>
             </div>
 
+            <p><Typography variant="h4">Deberas aportar</Typography></p>
+            <p><Typography variant="body1">La siguiene es una lisa de documentos y/o formularios que te solicitaremos según se requiera. Lo que solicitamos puede varias según los datos que aportes.</Typography></p>
 
             <div style={{paddingLeft: 16}}>
               <p><Typography variant="body1"><Link component={RouterLink} to="/pic/web/requisito-1">* Documento de Identidad del beneficiario del CUD.</Link></Typography></p>
@@ -61,10 +63,15 @@ function WebTramitePage1(props: any) {
             <p><Typography variant="body1">Una vez iniciado trámite deberas pagar el sellado para poder presentar el trámite.</Typography></p>
             <p><Typography variant="body1">Lo podrás pagar usando <strong>Puntos de Cobro, Pasarela Banco Municipal, VEP, ....</strong></Typography></p>
 
-            <p><Typography variant="h4">Area Responsable </Typography></p>
+            <p><Typography variant="h4">Como se realizar</Typography></p>
             <div style={{paddingLeft: 16}}>
-              <p><Typography variant="body1">* Area xyz de la direccion de xyz</Typography></p>
+              <p><Typography variant="body1">[[Completar]]</Typography></p>
+              <p><Typography variant="body1">[[Información especifica del trámite]]</Typography></p>
+              <p><Typography variant="body1">[[Enlaces a guia general de trámites]]</Typography></p>
             </div>
+            <p>
+              <Button color="primary" variant="contained" component={RouterLink} to="/pic/web/login">COMENZAR TRÁMITE</Button>
+            </p>
 
           </Paper>
         </Container>

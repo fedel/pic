@@ -27,6 +27,7 @@ function WebLayout(props: any) {
 
     return (
         <Container className={classes.container} maxWidth="md">
+            {!isLogged && 
             <Paper className={classes.paper} elevation={0}>
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
@@ -38,12 +39,9 @@ function WebLayout(props: any) {
                         </Typography>
                     </Grid>
                     <Grid item xs={2} style={{textAlign: "right"}}>
-                        {isLogged && 
-                            <p>Usuario</p>
-                        }
                     </Grid>
                 </Grid>
-                {isLogged && 
+                {false &&
                     <Paper elevation={0}>
                         <p style={{textAlign: "center"}}>
                             <Button color="primary">Registros</Button>
@@ -55,14 +53,34 @@ function WebLayout(props: any) {
                     </Paper>
                 }
             </Paper>
+            }
             
+            {!isLogged && 
             <Container className={classes.container2}>
-
                 <Paper className={classes.paper}>
                     <p><Typography color="primary" variant="h6">COVID19: Conocé los síntomas, cómo cuidarte, preguntas frecuentes, normativa relacionada.</Typography></p>
                 </Paper>
             </Container>
+            }
 
+            {isLogged && 
+            <Paper className={classes.paper} elevation={0}>
+                <Grid container spacing={1} className={classes.header}>
+                    <Grid item xs={2}>
+                        rosario.gob.ar
+                    </Grid>
+                    <Grid item xs={8} style={{textAlign: "center"}}>
+                        <Typography variant="h5">
+                        Libre estacionamiento para personas con discapacidad
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={2} style={{textAlign: "right"}}>
+                        <Typography variant="body1"><Link href="#">Federico Luna</Link></Typography>
+                        <Typography variant="caption">Perfil</Typography>
+                    </Grid>
+                </Grid>
+            </Paper>
+            }
             {props.children}
         </Container>
     )

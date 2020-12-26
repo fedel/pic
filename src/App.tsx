@@ -21,11 +21,15 @@ import WebTramitePage1 from './web/WebTramitePage1';
 import WebRequisitoPage1 from './web/WebRequisitoPage1';
 import WebRequisitoPage2 from './web/WebRequisitoPage2';
 import WebLoginPage from './web/WebLoginPage';
-import TramiteInicioTitularPage1 from './tramites/TramiteInicioTitularPage1';
-import TramiteInicioDatosPage1 from './tramites/TramiteInicioDatosPage1';
-import TramiteInicioExitoPage1 from './tramites/TramiteInicioExitoPage1';
-import TramiteEnvioPage1 from './tramites/TramiteEnvioPage1';
-import TramiteGestionarPage1 from './tramites/TramiteGestionPage1';
+import Tramite1InicioTitularPage from './tramites/tramite-1/TramiteInicioTitularPage';
+import Tramite1InicioFamiliarPage from './tramites/tramite-1/TramiteInicioFamiliarPage';
+import Tramite1InicioChequeo1Page from './tramites/tramite-1/TramiteInicioChequeo1Page';
+import Tramite1InicioChequeo2Page from './tramites/tramite-1/TramiteInicioChequeo2Page';
+import Tramite1InicioDatosPage from './tramites/tramite-1/TramiteInicioDatosPage';
+import Tramite1InicioExitoPage from './tramites/tramite-1/TramiteInicioExitoPage';
+import Tramite1DocumentoCduPage from './tramites/tramite-1/TramiteDocumentoCduPage';
+import Tramite1GestionarPage from './tramites/tramite-1/TramiteGestionPage';
+import Tramite1EnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -93,11 +97,15 @@ export default function App(props: any) {
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
-          <TramiteInicioTitularPage1 path="/tramites/tramite-1/inicio-titular"/>
-          <TramiteInicioDatosPage1 path="/tramites/tramite-1/inicio-datos"/>
-          <TramiteInicioExitoPage1 path="/tramites/tramite-1/inicio-exito"/>
-          <TramiteGestionarPage1 path="/tramites/tramite-1/gestion"/>
-          <TramiteEnvioPage1 path="/tramites/tramite-1/envio"/>
+          <Tramite1InicioTitularPage path="/tramites/tramite-1/inicio-titular"/>
+          <Tramite1InicioFamiliarPage path="/tramites/tramite-1/inicio-familiar"/>
+          <Tramite1InicioChequeo1Page path="/tramites/tramite-1/inicio-chequeo-1"/>
+          <Tramite1InicioChequeo2Page path="/tramites/tramite-1/inicio-chequeo-2"/>
+          <Tramite1DocumentoCduPage path="/tramites/tramite-1/documentos/documento-cdu"/>
+          <Tramite1InicioDatosPage path="/tramites/tramite-1/inicio-datos"/>
+          <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
+          <Tramite1GestionarPage path="/tramites/tramite-1/gestion"/>
+          <Tramite1EnvioPage path="/tramites/tramite-1/envio"/>
         </Router>
     </WebLayout>
 
