@@ -28,6 +28,7 @@ import Tramite1InicioChequeo2Page from './tramites/tramite-1/TramiteInicioCheque
 import Tramite1InicioDatosPage from './tramites/tramite-1/TramiteInicioDatosPage';
 import Tramite1InicioExitoPage from './tramites/tramite-1/TramiteInicioExitoPage';
 import Tramite1DocumentoCduPage from './tramites/tramite-1/TramiteDocumentoCduPage';
+import TramiteSelladoPage from './tramites/tramite-1/TramiteSelladoPage';
 import Tramite1GestionarPage from './tramites/tramite-1/TramiteGestionPage';
 import Tramite1EnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 
@@ -102,6 +103,7 @@ export default function App(props: any) {
           <Tramite1InicioChequeo1Page path="/tramites/tramite-1/inicio-chequeo-1"/>
           <Tramite1InicioChequeo2Page path="/tramites/tramite-1/inicio-chequeo-2"/>
           <Tramite1DocumentoCduPage path="/tramites/tramite-1/documentos/documento-cdu"/>
+          <TramiteSelladoPage path="/tramites/tramite-1/sellado"/>
           <Tramite1InicioDatosPage path="/tramites/tramite-1/inicio-datos"/>
           <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
           <Tramite1GestionarPage path="/tramites/tramite-1/gestion"/>

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function TramiteDocumentoCduPage1(props: any) {
+function TramiteSelladoPage(props: any) {
   const classes = useStyles();
 
   const [titular, setTitular] = React.useState(false);
@@ -31,24 +31,27 @@ function TramiteDocumentoCduPage1(props: any) {
     <Container className={classes.container}>
       <Paper className={classes.paper}>
         <p>
-          <Typography variant="h4">Certificado de discapacidad único</Typography>
+          <Typography variant="h4">Pagar sellado ...XYZ</Typography>
         </p>
 
         <p>
-          <Typography variant="body1">Es certificado que otorga.... Ver la guia de <Link href="#">como se obtiene.</Link></Typography>
+          <Typography variant="h5">Son $ 760,00</Typography>
         </p>
 
         <p>&nbsp;</p>
 
         <form noValidate autoComplete="off" >
           <FormControl component="fieldset">
-            <FormLabel component="legend">Usar documento:</FormLabel>
+            <FormLabel component="legend">Como lo pago?</FormLabel>
             <RadioGroup aria-label="titular1" name="titular1">
-              <FormControlLabel value="yo" control={<Radio />} label="CDU-20245868430" />
-              <div>Este documento lo subiste previemente el 27/07/2020. <Link href="#">Ver documento.</Link></div>
+              <FormControlLabel value="bmr" control={<Radio />} label="Pagar OnLine con Pasarela BMR" />
+              <div>Te redirijimos a la página del BMR para que pagues...<Link href="#">Pagar.</Link></div>
               <p></p>
-              <FormControlLabel value="familiar" control={<Radio />} label="Subir certificado de discapacidad único" />
-              <div>Buscar archivo en mi dispositivo y <Link href="#">SUBIR DOCUMENTACIÓN.</Link></div>
+              <FormControlLabel value="vep" control={<Radio />} label="Pagar con VEP" />
+              <div>Te redirijimos a la página de la AFIP para generar un VEP...<Link href="#">Pagar.</Link></div>
+              <p></p>
+              <FormControlLabel value="recibo" control={<Radio />} label="Pagar con recibo en Punto de Pago" />
+              <div>Podes <Link href="#">IMPRIMIR</Link> o <Link href="#">DESCARGAR</Link> el recibo</div>
             </RadioGroup>
           </FormControl>
         </form>
@@ -59,7 +62,7 @@ function TramiteDocumentoCduPage1(props: any) {
         <p>
           <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER TRÁMITE</Button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/sellado">SIGUIENTE</Button>
+          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/enviar">SIGUIENTE</Button>
         </p>
       </Paper>
 
@@ -68,4 +71,4 @@ function TramiteDocumentoCduPage1(props: any) {
   );
 }
 
-export default TramiteDocumentoCduPage1;
+export default TramiteSelladoPage;
