@@ -1,6 +1,8 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Radio, FormControl, FormLabel, RadioGroup, FormControlLabel } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Radio, FormControl, FormLabel, RadioGroup, FormControlLabel, Dialog, DialogTitle, DialogActions, DialogContent, Slide } from "@material-ui/core";
 import { Link as RouterLink, useNavigate } from "@reach/router"
+import { TransitionProps } from '@material-ui/core/transitions/transition';
+import TramitePasos from './TramitePasos';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,9 +16,27 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & { children?: React.ReactElement<any, any> },
+  ref: React.Ref<unknown>,
+) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 function TramiteInicioTitularPage1(props: any) {
     const classes = useStyles();
 
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+  
     const [titular, setTitular] = React.useState('titular');
     const navigate = useNavigate();
     
@@ -24,9 +44,13 @@ function TramiteInicioTitularPage1(props: any) {
       setTitular((event.target as HTMLInputElement).value);
     };
 
+    const volver = () => {
+      navigate("/pic/web/tramite-1")
+    };
+
     const siguiente = () => {
       if (titular === "yo") {
-        navigate("/pic/tramites/tramite-1/inicio-chequeo-1")
+        navigate("/pic/tramites/tramite-1/inicio-titular-dni")
       } else if (titular === "familiar") {
         navigate("/pic/tramites/tramite-1/inicio-familiar")
       } else {
@@ -38,7 +62,8 @@ function TramiteInicioTitularPage1(props: any) {
         <Container className={classes.container}>
           <Paper className={classes.paper}>
             <p>
-              <Typography variant="h4">Para quien es el trámite?</Typography>
+              <Typography variant="h4">Para quién es el trámite?</Typography>
+              <Typography variant="body2"><Link href="#" onClick={handleClickOpen}>Paso número 2 de 10</Link></Typography>
             </p>
             <p>
               <Typography variant="body1">Indicar quien es el beneficiario, titular o a quien esta destinado el trámite.</Typography>
@@ -63,9 +88,28 @@ function TramiteInicioTitularPage1(props: any) {
             </div>
 
             <p>
+              <Button color="primary" variant="contained" onClick={volver}>VOLVER</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Button color="primary" variant="contained" onClick={siguiente}>SIGUIENTE</Button>
             </p>
           </Paper>
+          <Dialog
+            open={open}
+            TransitionComponent={Transition}
+            keepMounted
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-slide-title"
+            aria-describedby="alert-dialog-slide-description"
+          >
+            <DialogContent>
+              <TramitePasos></TramitePasos>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose} color="primary">
+                Cerrar
+              </Button>
+            </DialogActions>
+          </Dialog>
+
 
 {
   /*
@@ -137,5 +181,6 @@ function TramiteInicioTitularPage1(props: any) {
         </Container>
     );
   }
-  
+
+
 export default TramiteInicioTitularPage1;

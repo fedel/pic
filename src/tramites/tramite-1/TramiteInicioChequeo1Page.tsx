@@ -1,6 +1,7 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Radio, FormControl, FormLabel, RadioGroup, FormControlLabel } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Radio, FormControl, FormLabel, RadioGroup, FormControlLabel, IconButton } from "@material-ui/core";
 import { Link as RouterLink, useNavigate } from "@reach/router"
+import { PhotoCamera } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -10,6 +11,9 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       padding: theme.spacing(1),
       margin: theme.spacing(2),
+    },
+    photo: {
+      display: "none",
     },
   }),
 );
@@ -39,6 +43,7 @@ function TramiteInicioChequeo1Page(props: any) {
       <Paper className={classes.paper}>
         <p>
           <Typography variant="h4">Verificación de multas</Typography>
+          <Typography variant="body2"><Link href="#">Paso número ...</Link></Typography>
         </p>
 
         <p>
@@ -53,8 +58,17 @@ function TramiteInicioChequeo1Page(props: any) {
               <div>Sigue el enlace para <Link href="#">gestionar tus multas.</Link></div>
               <p></p>
               <FormControlLabel value="yapague" control={<Radio />} label="La pagué recientemente" />
-                  Podrás dar de alta el trámite pero tendremos que esperar hasta que se acredite el pago.
-                  <p></p>
+                  <div>Podrás dar de alta el trámite pero tendras que esperar hasta que verifiquemos tus datos.</div>
+                  <p>
+                  <TextField id="outlined-basic" helperText="Este campo es..." label="FOTO DEL COMPROBANTE" variant="filled" style={{ width: "280px" }} />
+                  <input accept="image/*" className={classes.photo} id="icon-button-file" type="file" />
+                  <label htmlFor="icon-button-file">
+                    <IconButton color="primary" aria-label="upload picture" component="span" size="medium">
+                      <PhotoCamera />
+                    </IconButton>
+                  </label>
+                </p>
+
             </RadioGroup>
           </FormControl>
         </div>

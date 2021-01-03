@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function TramiteInicioFamiliarPage1(props: any) {
+function TramiteInicioTitularDniPage1(props: any) {
   const classes = useStyles();
 
-  const [titular, setTitular] = React.useState(false);
+  const [titular, setTitular] = React.useState(true);
   const handleTitular = (event: React.MouseEvent) => {
     setTitular(true);
   };
@@ -31,19 +31,11 @@ function TramiteInicioFamiliarPage1(props: any) {
     <Container className={classes.container}>
       <Paper className={classes.paper}>
         <p>
-          <Typography variant="h4">Datos del Familiar</Typography>
-          <Typography variant="body2">Para quién es el trámite. <Link href="#">Paso 2 de 10</Link></Typography>
-        </p>
-        <p>
-          <Typography variant="body1">Ingresa los datos del beneficiario del trámite</Typography>
+          <Typography variant="h4">Tu DNI</Typography>
+          <Typography variant="body2">Paso: Para quién es el trámite, número <Link href="#">2 de 10</Link></Typography>
         </p>
 
         <form noValidate autoComplete="off" >
-          <p>
-            <TextField id="outlined-basic" helperText="Este campo es..." label="CUIL" variant="filled" style={{ width: "280px" }} />
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <Button variant="contained" color="primary" style={{ marginTop: "8pt" }} onClick={handleTitular}>ENVIAR</Button>
-          </p>
           <p>&nbsp;</p>
 
           {titular &&
@@ -93,4 +85,4 @@ function TramiteInicioFamiliarPage1(props: any) {
   );
 }
 
-export default TramiteInicioFamiliarPage1;
+export default TramiteInicioTitularDniPage1;

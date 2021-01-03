@@ -31,6 +31,8 @@ import Tramite1DocumentoCduPage from './tramites/tramite-1/TramiteDocumentoCduPa
 import TramiteSelladoPage from './tramites/tramite-1/TramiteSelladoPage';
 import Tramite1GestionarPage from './tramites/tramite-1/TramiteGestionPage';
 import Tramite1EnvioPage from './tramites/tramite-1/TramiteEnvioPage';
+import TramiteInicioTitularDniPage1 from './tramites/tramite-1/TramiteInicioTitularDniPage copy';
+import Tramite1InicioConfirmacionPage from './tramites/tramite-1/Tramite1ConfirmacionPage';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -98,13 +100,16 @@ export default function App(props: any) {
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
+
           <Tramite1InicioTitularPage path="/tramites/tramite-1/inicio-titular"/>
+          <TramiteInicioTitularDniPage1 path="/tramites/tramite-1/inicio-titular-dni"/>
           <Tramite1InicioFamiliarPage path="/tramites/tramite-1/inicio-familiar"/>
           <Tramite1InicioChequeo1Page path="/tramites/tramite-1/inicio-chequeo-1"/>
           <Tramite1InicioChequeo2Page path="/tramites/tramite-1/inicio-chequeo-2"/>
           <Tramite1DocumentoCduPage path="/tramites/tramite-1/documentos/documento-cdu"/>
           <TramiteSelladoPage path="/tramites/tramite-1/sellado"/>
           <Tramite1InicioDatosPage path="/tramites/tramite-1/inicio-datos"/>
+          <Tramite1InicioConfirmacionPage path="/tramites/tramite-1/inicio-confirmacion"/>
           <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
           <Tramite1GestionarPage path="/tramites/tramite-1/gestion"/>
           <Tramite1EnvioPage path="/tramites/tramite-1/envio"/>
