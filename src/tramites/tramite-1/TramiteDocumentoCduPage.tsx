@@ -42,13 +42,13 @@ function TramiteDocumentoCduPage1(props: any) {
 
         <form noValidate autoComplete="off" >
           <FormControl component="fieldset">
-            <FormLabel component="legend">Usar documento:</FormLabel>
+            <FormLabel component="legend">Que documento querés usar?</FormLabel>
             <RadioGroup aria-label="titular1" name="titular1">
-              <FormControlLabel value="yo" control={<Radio />} label="CDU-20245868430" />
-              <div>Este documento lo subiste previemente el 27/07/2020. <Link href="#">Ver documento.</Link></div>
+              <FormControlLabel value="yo" control={<Radio />} label="Uno que ya subí" />
+              <div>Este documento lo subiste previemente el 27/07/2020 con nombre CDU-20245868430. <Link href="#">Ver documento.</Link></div>
               <p></p>
-              <FormControlLabel value="familiar" control={<Radio />} label="Subir certificado de discapacidad único" />
-              <div>Buscar archivo en mi dispositivo y <Link href="#">SUBIR DOCUMENTACIÓN.</Link></div>
+              <FormControlLabel value="familiar" control={<Radio />} label="Subir una copia nueva" />
+              <div>Buscar el archivo en mi dispositivo y <Link href="#">SUBIR DOCUMENTACIÓN.</Link></div>
             </RadioGroup>
           </FormControl>
         </form>

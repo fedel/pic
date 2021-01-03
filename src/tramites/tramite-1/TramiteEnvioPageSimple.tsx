@@ -45,7 +45,7 @@ function TramiteEnvioPage(props: any) {
 
             <p>
               <Button variant="contained" onClick={back}>ATRAS</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-              <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/enviar">ENVIAR SOLICITUD</Button>
+              <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">ENVIAR SOLICITUD</Button>
             </p>
           </Paper>
         </Container>

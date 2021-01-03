@@ -79,6 +79,7 @@ function TramiteInicioChequeo1Page(props: any) {
           <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/inicio-titular">ANTERIOR</Button>&nbsp;&nbsp;&nbsp;&nbsp;
           
           {change === "yapague" && <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/inicio-chequeo-2">SIGUIENTE</Button> }
+          {change === "gestionar" && <Button color="primary" variant="contained" component={RouterLink} to="#">GESTIONAR</Button> }
         </p>
       </Paper>
     </Container>

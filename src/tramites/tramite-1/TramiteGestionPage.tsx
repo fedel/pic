@@ -21,68 +21,149 @@ function TramiteGestionPage1(props: any) {
     return (
         <Container className={classes.container}>
           <Paper className={classes.paper}>
-            <p><Typography variant="body1">Seccion 1 / Sub Seccion 2 / Trámite 1 / Inicio</Typography></p>
-            <p><Typography variant="h3">Trámite 1</Typography></p>
+            <p><Typography variant="h3">Trámite 1 (TODO)</Typography></p>
             <p><Typography variant="body1">Este trámite....</Typography></p>
-          </Paper>
 
-          <Paper className={classes.paper}>
             <p>
-              <Typography variant="h5">Requisitos</Typography>
+              <Typography variant="h4">Documentos</Typography>
             </p>
             <Typography variant="body1">
+
+              <Divider></Divider>
+              (ejemplo documentos por completar)
+              <br></br>
+
               <Grid container spacing={2}>
-                <Grid item xs={9}><Link href="#">* Link a requisito 1</Link></Grid>
+                <Grid item xs={9}><Link href="#">* Datos iniciales</Link></Grid>
                 <Grid item xs={3}>COMPLETAR</Grid>
               </Grid>
 
               <Grid container spacing={2}>
-                <Grid item xs={9}><Link href="#">* Link a requisito 2</Link></Grid>
+                <Grid item xs={9}><Link href="#">* Documento de Identidad del beneficiario del CUD.</Link></Grid>
                 <Grid item xs={3}>COMPLETAR</Grid>
               </Grid>
 
               <Grid container spacing={2}>
-                <Grid item xs={9}><Link href="#">* Link a requisito 3</Link></Grid>
+                <Grid item xs={9}><Link href="#">* Certificado Único de Discapacidad (CDU) emitido por la Junta Evaluadora de Discapacidad.</Link></Grid>
                 <Grid item xs={3}>COMPLETAR</Grid>
+              </Grid>
+              <p>
+              <Button variant="contained" color="primary" disabled component={RouterLink} to="/pic/tramites/tramite-1/envio">PARA ENVIAR COMPLETA LOS DOCUMENTOS</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+              <br></br>
+
+              <Divider></Divider>
+              (ejemplo documentos completos falta enviar)
+              <br></br>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Datos iniciales</Link></Grid>
+                <Grid item xs={3}>COMPLETO</Grid>
               </Grid>
 
               <Grid container spacing={2}>
-                <Grid item xs={9}><Link href="#">* Link a requisito 4</Link></Grid>
+                <Grid item xs={9}><Link href="#">* Documento de Identidad del beneficiario del CUD.</Link></Grid>
+                <Grid item xs={3}>COMPLETO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Certificado Único de Discapacidad (CDU) emitido por la Junta Evaluadora de Discapacidad.</Link></Grid>
+                <Grid item xs={3}>COMPLETO</Grid>
+              </Grid>
+              <p>
+              <Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/envio">ENVIAR SOLICITUD</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+              <br></br>
+
+              <Divider></Divider>
+              (ejemplo documentos enviados, solicitud presentada)
+              <br></br>
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento A de ejemplo 1</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento B de ejemplo 1</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento C de ejemplo 1</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+              <p>
+              <Button variant="contained" color="primary" disabled component={RouterLink} to="/pic/tramites/tramite-1/envio">ESTAMOS ANALIZANDO LA SOLICITUD</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+
+              <br></br>
+              <Divider></Divider>
+              (ejemplo documentos observados)
+              <br></br>
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento A de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento B de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento C de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>OBSERVADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento C de ejemplo 2</Link></Grid>
                 <Grid item xs={3}>COMPLETAR</Grid>
               </Grid>
+
+              <p>
+              <Button variant="contained" color="primary" disabled component={RouterLink} to="/pic/tramites/tramite-1/envio">TENES QUE COMPLETAR DOCUMENTOS CORREGIDOS</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+
+              <br></br>
+              <Divider></Divider>
+              (ejemplo documentos corregidos)
+              <br></br>
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento A de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento B de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>ENVIADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento C de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>OBSERVADO</Grid>
+              </Grid>
+
+              <Grid container spacing={2}>
+                <Grid item xs={9}><Link href="#">* Otro documento C de ejemplo 2</Link></Grid>
+                <Grid item xs={3}>COMPLETO</Grid>
+              </Grid>
+
+              <p>
+              <Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/envio">ENVIAR CORRECCIONES</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+              </p>
+
+
 
             </Typography>
-          </Paper>
 
-          <Paper className={classes.paper}>
-            <p><Typography variant="h5">Datos del Trámite</Typography></p>
+            <p><Typography variant="h4">Datos del Trámite</Typography></p>
 
             <p>
-              <Typography variant="subtitle2">Solicitante</Typography>
-              <Typography variant="caption">El solicitante se considera que........</Typography>
-              <Typography variant="body1">Federico Luna</Typography>
+              ...
             </p>
 
             <p>
-              <Typography variant="subtitle2">Titular</Typography>
-              <Typography variant="caption">El titular se considera que........</Typography>
-              <Typography variant="body1">Federico Luna 20342221110</Typography>
-            </p>
-            <p>
-              <Typography variant="caption">Contacto</Typography>
-              <Typography variant="body1">mail@gmail.com</Typography>
-            </p>
-
-            <p>
-              <Button variant="contained">DATOS DEL TITULAR</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-              <Button variant="contained">DATOS INCIALES</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-              <Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/envio">ENVIAR SOLICITUD</Button>&nbsp;&nbsp;&nbsp;&nbsp;
-            </p>
-          </Paper>
-
-          <Paper className={classes.paper}>
-            <p>
-              <Typography variant="h5">Certificados Emitidos</Typography>
+              <Typography variant="h4">Certificados Emitidos</Typography>
             </p>
 
             <p>

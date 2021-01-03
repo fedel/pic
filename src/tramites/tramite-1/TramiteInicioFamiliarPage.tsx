@@ -50,10 +50,10 @@ function TramiteInicioFamiliarPage1(props: any) {
             <FormControl component="fieldset">
               <FormLabel component="legend">Usar documento:</FormLabel>
               <RadioGroup aria-label="titular1" name="titular1">
-                <FormControlLabel value="yo" control={<Radio />} label="DNI-20245868430" />
+                <FormControlLabel value="yo" control={<Radio />} label="Usar el que ya subiste: DNI-20245868430" />
                 <div>Este documento lo subiste previemente el 27/11/2019. <Link href="#">Ver documento.</Link></div>
                 <p></p>
-                <FormControlLabel value="familiar" control={<Radio />} label="Subir fotos del DNI" />
+                <FormControlLabel value="familiar" control={<Radio />} label="Subir nuevas fotos del DNI" />
                   Subir las foto de frente y dorso del DNI de tu familiar
                   <p>
                   <TextField id="outlined-basic" helperText="Este campo es..." label="FOTO DEL FRENTE DEL DNI" variant="filled" style={{ width: "280px" }} />
