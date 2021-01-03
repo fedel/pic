@@ -33,6 +33,7 @@ import Tramite1GestionarPage from './tramites/tramite-1/TramiteGestionPage';
 import Tramite1EnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 import TramiteInicioTitularDniPage1 from './tramites/tramite-1/TramiteInicioTitularDniPage copy';
 import Tramite1InicioConfirmacionPage from './tramites/tramite-1/Tramite1ConfirmacionPage';
+import TramiteEnvioPage from './tramites/tramite-1/TramiteEnvioPageSimple';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -112,7 +113,7 @@ export default function App(props: any) {
           <Tramite1InicioConfirmacionPage path="/tramites/tramite-1/inicio-confirmacion"/>
           <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
           <Tramite1GestionarPage path="/tramites/tramite-1/gestion"/>
-          <Tramite1EnvioPage path="/tramites/tramite-1/envio"/>
+          <TramiteEnvioPage path="/tramites/tramite-1/envio"/>
         </Router>
     </WebLayout>
 

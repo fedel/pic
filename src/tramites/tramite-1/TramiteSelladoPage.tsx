@@ -60,9 +60,9 @@ function TramiteSelladoPage(props: any) {
 
       <Paper className={classes.paper}>
         <p>
-          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER TRÁMITE</Button>
+          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER SOLICITUD</Button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/enviar">SIGUIENTE</Button>
+          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/envio">SIGUIENTE</Button>
         </p>
       </Paper>
 
