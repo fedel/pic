@@ -42,7 +42,7 @@ function WebLoginPage(props: any) {
                 <TextField id="outlined-basic" label="Clave" variant="filled" style={{width: "280px"}}/>
                 </p>
                 </form>
-                <Button color="primary" variant="contained" onClick={login} component={RouterLink} to="/pic/tramites/tramite-1/inicio-titular">INGRESAR</Button>
+                <Button color="primary" variant="contained" onClick={login} component={RouterLink} to="/pic/tramites/tramite-1/inicio-datos">INGRESAR</Button>
             </p>
 
             <p>

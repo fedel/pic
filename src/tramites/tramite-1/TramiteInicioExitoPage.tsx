@@ -21,21 +21,14 @@ function TramiteInicioExitoPage1(props: any) {
     return (
         <Container className={classes.container}>
           <Paper className={classes.paper}>
-            <p><Typography variant="h4">Solicitud dada de alta.</Typography></p>
+            <p><Typography variant="h4">Solicitud dada de alta</Typography></p>
             <p><Typography variant="body1">Ahora debes aportar la documentación faltante.</Typography></p>
-            <p><Typography variant="body1">Se puede realizar ahora o se puede continuar luego desde tu Perfil.</Typography></p>
-            <p><Typography variant="body1">Te enviamos un mail con datos del trámite.</Typography></p>
+            <p><Typography variant="body1">Te enviamos un mail con datos de la solicitud.</Typography></p>
+            <p>&nbsp;</p>
+            <p>
+              <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">COMPLETAR ACCIONES FALTANTES</Button>
+            </p>
           </Paper>
-
-          <Paper className={classes.paper}>
-              <p>
-                <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER SOLICITUD</Button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/documentos/documento-cdu">COMPLETAR DOCUMENTOS</Button>
-              </p>
-
-          </Paper>
-
         </Container>
 
     );

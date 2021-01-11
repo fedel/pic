@@ -76,12 +76,13 @@ function TramiteInicioChequeo1Page(props: any) {
 
       <Paper className={classes.paper}>
         <p>
-          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/inicio-titular">ANTERIOR</Button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VOLVER</Button>&nbsp;&nbsp;&nbsp;&nbsp;
           
-          {change === "yapague" && <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/inicio-chequeo-2">SIGUIENTE</Button> }
+          {change === "yapague" && <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion?op=LM,">CONFIRMAR</Button> }
           {change === "gestionar" && <Button color="primary" variant="contained" component={RouterLink} to="#">GESTIONAR</Button> }
         </p>
       </Paper>
+      {change === "yapague" && <Button variant="text" component={RouterLink} to="/pic/tramites/tramite-1/gestionx?op=LM,">CONFIRMARX</Button> }
     </Container>
   );
 }

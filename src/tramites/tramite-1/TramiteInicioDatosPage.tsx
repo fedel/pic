@@ -20,14 +20,24 @@ function TramiteInicioDatosPage1(props: any) {
 
     return (
         <Container className={classes.container}>
+
           <Paper className={classes.paper}>
               <p>
                 <Typography variant="h4">Datos Iniciales</Typography>
                 <Typography variant="body2"><Link href="#">Paso número ...</Link></Typography>
               </p>
-              <p>
-                <Typography variant="body1">Estos datos son necesarios para....</Typography>
-              </p>
+              
+              <Typography variant="body1">
+                <p>
+                    Bienvenido FEDERICO LUNA estas iniciando la solicitud del trámite...
+                </p>
+                <p>
+                    Si deseas que la solicitud este <Link component={RouterLink} to="/pic/tramites/tramite-1/inicio-titular">a nombre de otra persona presiona aquí.</Link>
+                </p>
+                <p>
+                  Completa los siguientes datos
+                </p>
+              </Typography>
 
               <form noValidate autoComplete="off" >
                 <p>

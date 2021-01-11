@@ -23,7 +23,7 @@ function Tramite1InicioConfirmacionPage(props: any) {
           <Paper className={classes.paper}>
             <p>
               <Typography variant="h4">Confirmación</Typography>
-              <Typography variant="body2"><Link href="#">Paso 7 de 10</Link></Typography>
+              <Typography variant="body2"><Link href="#">Paso número...</Link></Typography>
             </p>
 
             <p>

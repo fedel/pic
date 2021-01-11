@@ -29,11 +29,15 @@ import Tramite1InicioDatosPage from './tramites/tramite-1/TramiteInicioDatosPage
 import Tramite1InicioExitoPage from './tramites/tramite-1/TramiteInicioExitoPage';
 import Tramite1DocumentoCduPage from './tramites/tramite-1/TramiteDocumentoCduPage';
 import TramiteSelladoPage from './tramites/tramite-1/TramiteSelladoPage';
-import Tramite1GestionarPage from './tramites/tramite-1/TramiteGestionPage';
-import Tramite1EnvioPage from './tramites/tramite-1/TramiteEnvioPage';
+import TramiteGestion1Page from './tramites/tramite-1/TramiteGestion1Page';
+import TramiteGestion1xPage from './tramites/tramite-1/TramiteGestion1xPage';
+import TramiteGestion2Page from './tramites/tramite-1/TramiteGestion2Page';
+import TramiteGestion3Page from './tramites/tramite-1/TramiteGestion3Page';
+import TramiteGestion4Page from './tramites/tramite-1/TramiteGestion4Page';
+import TramiteEnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 import TramiteInicioTitularDniPage1 from './tramites/tramite-1/TramiteInicioTitularDniPage copy';
 import Tramite1InicioConfirmacionPage from './tramites/tramite-1/Tramite1ConfirmacionPage';
-import TramiteEnvioPage from './tramites/tramite-1/TramiteEnvioPageSimple';
+import TramiteDocumentoSubsanarPage from './tramites/tramite-1/TramiteDocumentoSubsanarPage';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -112,8 +116,13 @@ export default function App(props: any) {
           <Tramite1InicioDatosPage path="/tramites/tramite-1/inicio-datos"/>
           <Tramite1InicioConfirmacionPage path="/tramites/tramite-1/inicio-confirmacion"/>
           <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
-          <Tramite1GestionarPage path="/tramites/tramite-1/gestion"/>
+          <TramiteGestion1Page path="/tramites/tramite-1/gestion"/>
+          <TramiteGestion1xPage path="/tramites/tramite-1/gestionx"/>
+          <TramiteGestion2Page path="/tramites/tramite-1/gestion-2"/>
+          <TramiteGestion3Page path="/tramites/tramite-1/gestion-3"/>
+          <TramiteGestion4Page path="/tramites/tramite-1/gestion-4"/>
           <TramiteEnvioPage path="/tramites/tramite-1/envio"/>
+          <TramiteDocumentoSubsanarPage path="/tramites/tramite-1/subsanar-cdu"/>
         </Router>
     </WebLayout>
 

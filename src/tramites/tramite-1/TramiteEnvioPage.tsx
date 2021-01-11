@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function TramiteEnvioPage1(props: any) {
+function TramiteEnvioPage(props: any) {
     const classes = useStyles();
 
     return (
@@ -153,4 +153,4 @@ function TramiteEnvioPage1(props: any) {
     );
   }
   
-export default TramiteEnvioPage1;
+export default TramiteEnvioPage;

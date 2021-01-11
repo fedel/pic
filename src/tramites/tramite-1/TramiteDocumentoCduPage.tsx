@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, IconButton } from "@material-ui/core";
-import { Link as RouterLink, navigate } from "@reach/router"
+import { Link as RouterLink, navigate, useLocation } from "@reach/router"
 import { PhotoCamera } from '@material-ui/icons';
 
 
@@ -21,8 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function TramiteDocumentoCduPage1(props: any) {
   const classes = useStyles();
-
+  const location = useLocation();
+  const esSubsanar = location.search.indexOf("subsanar") >= 0;
   const [titular, setTitular] = React.useState(false);
+
   const handleTitular = (event: React.MouseEvent) => {
     setTitular(true);
   };
@@ -57,11 +59,12 @@ function TramiteDocumentoCduPage1(props: any) {
 
       <Paper className={classes.paper}>
         <p>
-          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER TRÁMITE</Button>
+          <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion?op=LM,LD">VOLVER</Button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/sellado">SIGUIENTE</Button>
+          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion?op=?op=LM,LD,CDU">CONFIRMAR DOCUMENTO</Button>
         </p>
       </Paper>
+      <Button variant="text" component={RouterLink} to="/pic/tramites/tramite-1/gestionx?op=LM,LD,CDU">CONFIRMARX</Button>
 
     </Container>
 
