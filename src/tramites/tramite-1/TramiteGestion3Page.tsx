@@ -78,7 +78,7 @@ function TramiteGestion3Page(props: any) {
               <Paper elevation={0} className={classes.action}>
                 <Grid container spacing={2}>
                   <Grid item xs={9}>
-                    Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" className={classes.ok}></Chip>
+                    Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" color="secondary"></Chip>
                   </Grid>
                   <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
                 </Grid>
@@ -145,17 +145,6 @@ function TramiteGestion3Page(props: any) {
                   <Grid item xs={3}><Button variant="contained" color="secondary">OBSERVADO</Button></Grid>
                 </Grid>
               </Paper>
-
-              {esSubsanado &&
-                <Paper elevation={0} className={classes.action}>
-                  <Grid container spacing={2}>
-                    <Grid item xs={9}>
-                      Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" color="secondary"></Chip>
-                    </Grid>
-                    <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
-                  </Grid>
-                </Paper>
-              }
             </Typography>
           </Grid>
         </Grid>
