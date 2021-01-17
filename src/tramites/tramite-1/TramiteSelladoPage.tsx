@@ -62,7 +62,7 @@ function TramiteSelladoPage(props: any) {
         <p>
           <Button variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion">VER SOLICITUD</Button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/envio">SIGUIENTE</Button>
+          <Button color="primary" variant="contained" component={RouterLink} to="/pic/tramites/tramite-1/gestion?op=LM,LD,CDU,PAG">CONFIRMAR</Button>
         </p>
       </Paper>
 

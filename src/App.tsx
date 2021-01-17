@@ -30,7 +30,6 @@ import Tramite1InicioExitoPage from './tramites/tramite-1/TramiteInicioExitoPage
 import Tramite1DocumentoCduPage from './tramites/tramite-1/TramiteDocumentoCduPage';
 import TramiteSelladoPage from './tramites/tramite-1/TramiteSelladoPage';
 import TramiteGestion1Page from './tramites/tramite-1/TramiteGestion1Page';
-import TramiteGestion1xPage from './tramites/tramite-1/TramiteGestion1xPage';
 import TramiteGestion2Page from './tramites/tramite-1/TramiteGestion2Page';
 import TramiteGestion3Page from './tramites/tramite-1/TramiteGestion3Page';
 import TramiteGestion4Page from './tramites/tramite-1/TramiteGestion4Page';
@@ -117,7 +116,6 @@ export default function App(props: any) {
           <Tramite1InicioConfirmacionPage path="/tramites/tramite-1/inicio-confirmacion"/>
           <Tramite1InicioExitoPage path="/tramites/tramite-1/inicio-exito"/>
           <TramiteGestion1Page path="/tramites/tramite-1/gestion"/>
-          <TramiteGestion1xPage path="/tramites/tramite-1/gestionx"/>
           <TramiteGestion2Page path="/tramites/tramite-1/gestion-2"/>
           <TramiteGestion3Page path="/tramites/tramite-1/gestion-3"/>
           <TramiteGestion4Page path="/tramites/tramite-1/gestion-4"/>
