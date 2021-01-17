@@ -165,6 +165,7 @@ function TramiteGestion2Page(props: any) {
         <p>
           <Typography variant="h5">Pagos</Typography>
         </p>
+        <Typography variant="body1">
         <Grid container>
           <Grid item xs={12} md={8}>
             {!pagarVer &&
@@ -188,11 +189,13 @@ function TramiteGestion2Page(props: any) {
             }
           </Grid>
         </Grid>
+        </Typography>
 
         <br></br>
         <p>
           <Typography variant="h5">Turnos</Typography>
         </p>
+        <Typography variant="body1">
         <Grid container>
           <Grid item xs={12} md={8}>
             {!turnoVer &&
@@ -221,44 +224,38 @@ function TramiteGestion2Page(props: any) {
             }
           </Grid>
         </Grid>
-      </Paper>
+        </Typography>
 
-      <Paper className={classes.paper}>
-        {!enviarActivo &&
+
+          <br></br>
           <p>
-            <Typography variant="h4">ENVIAR LOS DATOS</Typography>
-            <Typography variant="h6">Aun no puede enviar la solicitud, debes completar los todos los datos.</Typography>
+            <Typography variant="h5">Enviar los datos</Typography>
+            {!enviarActivo &&
+              <Typography variant="h6">Aun no puede enviar la solcitud. Debes completar todos los datos.</Typography>
+            }
+            {enviarActivo &&
+              <Typography variant="h6">Debes enviar la solicitud.</Typography>
+            }
           </p>
-        }
-        {enviarActivo &&
-          <div>
-            <p>
-              <Typography variant="h4">ENVIAR LOS DATOS</Typography>
-            </p>
-            <p>
-              <Typography variant="h5">Debes enviar la solicitud.</Typography>
-            </p>
-          </div>
-        }
-    
-        <Grid container>
-          <Grid item xs={12} md={8}>
-            <Paper elevation={0} className={classes.action}>
-              <Grid container spacing={2}>
-                <Grid item xs={9}>Enviar solicitud</Grid>
-                {!enviarActivo &&
-                  <Grid item xs={3}><Button variant="outlined" disabled>ENVIAR</Button></Grid>
-                }
-                {enviarActivo &&
-                  <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2?#top">ENVIAR SOLICITUD</Button></Grid>
-                }
-              </Grid>
-            </Paper>
+          <Typography variant="body1">
+          <Grid container>
+            <Grid item xs={12} md={8}>
+              <Paper elevation={0} className={classes.action}>
+                <Grid container spacing={2}>
+                  <Grid item xs={9}>Enviar solicitud</Grid>
+                  {!enviarActivo &&
+                    <Grid item xs={3}><Button variant="outlined" disabled>ENVIAR SOLICITUD</Button></Grid>
+                  }
+                  {enviarActivo &&
+                    <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2?#top">ENVIAR SOLICITUD</Button></Grid>
+                  }
+                </Grid>
+              </Paper>
 
+            </Grid>
           </Grid>
-        </Grid>
+          </Typography>
       </Paper>
-
 
       <Button variant="text" component={RouterLink} to="/pic/tramites/tramite-1/gestion-3">Simular observación</Button>
 

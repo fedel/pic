@@ -141,20 +141,14 @@ function TramiteGestion2Page(props: any) {
             </Paper>
           </Grid>
         </Grid>
-      </Paper>
 
-      <Paper id="opciones" className={classes.paper}>
+        <br></br>
         <p>
-          <Typography variant="h4">SOLICITUD ENVIADA</Typography>
-          <Typography variant="h6">Aguarde a que procesemos sus datos.</Typography>
+          <Typography variant="h5">Enviar los datos</Typography>
+          <Typography variant="h6" color="primary">&nbsp;&nbsp;Solcitud enviada el 10/01/2021.</Typography>
         </p>
-        <p>
-          <Typography variant="body1">
-            Enviaremos un mensaje cuando este procesada.
-          </Typography>
-        </p>
-      </Paper>
 
+      </Paper>
 
       <Paper id="opciones" className={classes.paper}>
         <p>

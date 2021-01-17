@@ -202,6 +202,13 @@ function TramiteGestion3Page(props: any) {
             </Paper>
           </Grid>
         </Grid>
+
+        <br></br>
+        <p>
+          <Typography variant="h5">Enviar los datos</Typography>
+          <Typography variant="h6" color="primary">&nbsp;&nbsp;Solcitud enviada el 10/01/2021.</Typography>
+        </p>
+
       </Paper>
 
       <Paper id="opciones" className={classes.paper}>

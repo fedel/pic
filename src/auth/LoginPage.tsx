@@ -85,6 +85,16 @@ function LoginPage(props: any) {
         await navigate('/home');
     };
 
+    function modoWeb() {
+        window.sessionStorage.setItem("mode", "web");
+        window.location.reload();
+    }
+
+    function modoWebLogin() {
+        window.sessionStorage.setItem("mode", "web");
+        window.location.reload();
+    }
+
     return (
         <div className={classes.container}>
             <Typography variant="h6">Iniciar Sesión</Typography>
@@ -133,6 +143,12 @@ function LoginPage(props: any) {
                 <Button>Olvido su contraseña</Button>
                 <div className={classes.separator}>&nbsp;</div>
                 <Button  variant="contained" onClick={handleLogin}>Ingresar</Button>
+            </div>
+
+            <div className={classes.row}>
+                <Button  variant="contained" onClick={modoWeb}>Ir Web Anonimo</Button>
+                <div className={classes.separator}>&nbsp;</div>
+                <Button  variant="contained" onClick={modoWebLogin}>Ingresar Web</Button>
             </div>
         </div>
     );
