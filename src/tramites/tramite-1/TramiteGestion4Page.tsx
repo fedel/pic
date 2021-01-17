@@ -73,6 +73,27 @@ function TramiteGestion4Page(props: any) {
 
         <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
 
+       
+        <br></br>
+        <p>
+          <Typography variant="h5">Acciones necesarias</Typography>
+        </p>
+
+        <Grid container>
+          <Grid item xs={12} md={8}>
+            <Typography variant="body1">
+              <Paper elevation={0} className={classes.action}>
+                <Grid container spacing={2}>
+                  <Grid item xs={9}>
+                    Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" className={classes.ok}></Chip>
+                  </Grid>
+                  <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
+                </Grid>
+              </Paper>
+            </Typography>
+          </Grid>
+        </Grid>
+       
         <br></br>
         <p>
           <Typography variant="h5">Documentos aportados</Typography>

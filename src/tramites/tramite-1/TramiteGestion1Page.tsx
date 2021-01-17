@@ -25,6 +25,13 @@ const useStyles = makeStyles((theme: Theme) =>
     ok: {
       backgroundColor: "#6c6",
     },
+
+    paperMessage: {
+      padding: theme.spacing(1),
+      margin: theme.spacing(2),
+      textAlign: "center",
+      backgroundColor: "#b0bfbf",
+    }
   }),
 );
 
@@ -41,48 +48,33 @@ function TramiteGestion2Page(props: any) {
 
   return (
     <Container className={classes.container}>
-
       <Paper className={classes.paper}>
+        <p><Typography variant="h4">SOLICITUD LICENCIA DE ESTACIONAMIENTO</Typography></p>
+
+        <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
+
+        <Paper className={classes.paperMessage}>
         {!enviarActivo &&
-          <p>
-            <Typography variant="h4">COMPLETAR LOS DATOS</Typography>
-            <Typography variant="h6">Aun no puede enviar la solicitud, debes completar los todos los datos.</Typography>
+          <p >
+            <Typography variant="h5">COMPLETAR LOS DATOS</Typography>
+            <Typography variant="h5">Aun no puede enviar la solicitud, debes completar los todos los datos.</Typography>
           </p>
         }
         {enviarActivo &&
           <div>
             <p>
-              <Typography variant="h4">ENVIAR LOS DATOS</Typography>
+              <Typography variant="h5">ENVIAR LOS DATOS</Typography>
             </p>
             <p>
               <Typography variant="h5">Debes enviar la solicitud.</Typography>
             </p>
+
+            <p>
+              <Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2">ENVIAR SOLICITUD</Button>
+            </p>
           </div>
         }
-
-        <Grid container>
-          <Grid item xs={12} md={8}>
-            <Paper elevation={0} className={classes.action}>
-              <Grid container spacing={2}>
-                <Grid item xs={9}>Enviar solicitud</Grid>
-                {!enviarActivo &&
-                  <Grid item xs={3}><Button variant="outlined" disabled>ENVIAR</Button></Grid>
-                }
-                {enviarActivo &&
-                  <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2">ENVIAR</Button></Grid>
-                }
-
-              </Grid>
-            </Paper>
-
-          </Grid>
-        </Grid>
-      </Paper>
-
-      <Paper className={classes.paper}>
-        <p><Typography variant="h4">SOLICITUD LICENCIA DE ESTACIONAMIENTO</Typography></p>
-
-        <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
+        </Paper>
 
         <br></br>
         <p>
@@ -197,8 +189,6 @@ function TramiteGestion2Page(props: any) {
           </Grid>
         </Grid>
 
-
-
         <br></br>
         <p>
           <Typography variant="h5">Turnos</Typography>
@@ -233,10 +223,24 @@ function TramiteGestion2Page(props: any) {
         </Grid>
       </Paper>
 
-      <Paper id="opciones" className={classes.paper}>
-        <p>
-          <Typography variant="h5">MÁS OPCIONES</Typography>
-        </p>
+      <Paper className={classes.paper}>
+        {!enviarActivo &&
+          <p>
+            <Typography variant="h4">ENVIAR LOS DATOS</Typography>
+            <Typography variant="h6">Aun no puede enviar la solicitud, debes completar los todos los datos.</Typography>
+          </p>
+        }
+        {enviarActivo &&
+          <div>
+            <p>
+              <Typography variant="h4">ENVIAR LOS DATOS</Typography>
+            </p>
+            <p>
+              <Typography variant="h5">Debes enviar la solicitud.</Typography>
+            </p>
+          </div>
+        }
+    
         <Grid container>
           <Grid item xs={12} md={8}>
             <Paper elevation={0} className={classes.action}>
@@ -246,13 +250,16 @@ function TramiteGestion2Page(props: any) {
                   <Grid item xs={3}><Button variant="outlined" disabled>ENVIAR</Button></Grid>
                 }
                 {enviarActivo &&
-                  <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2">ENVIAR</Button></Grid>
+                  <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/gestion-2?#top">ENVIAR SOLICITUD</Button></Grid>
                 }
               </Grid>
             </Paper>
+
           </Grid>
         </Grid>
       </Paper>
+
+
       <Button variant="text" component={RouterLink} to="/pic/tramites/tramite-1/gestion-3">Simular observación</Button>
 
     </Container>

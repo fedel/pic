@@ -25,6 +25,12 @@ const useStyles = makeStyles((theme: Theme) =>
     ok: {
       backgroundColor: "#6c6",
     },
+    paperMessage: {
+      padding: theme.spacing(1),
+      margin: theme.spacing(2),
+      textAlign: "center",
+      backgroundColor: "#b0bfbf",
+    },
   }),
 );
 
@@ -36,63 +42,64 @@ function TramiteGestion3Page(props: any) {
 
   return (
     <Container className={classes.container}>
+      <Paper className={classes.paper}>
+        <p><Typography variant="h4">SOLICITUD LICENCIA DE ESTACIONAMIENTO</Typography></p>
 
-      <Paper id="corregir" className={classes.paper}>
+        <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
 
-        {!esSubsanado &&
-          <p>
-            <Typography variant="h4">CORREGIR DATOS</Typography>
-            <Typography variant="h6">Tiene datos observados. Debe subir nueva documentación corregida.</Typography>
-          </p>
-        }
+        <Paper className={classes.paperMessage}>
+          {!esSubsanado &&
+            <p>
+              <Typography variant="h5">CORREGIR DATOS</Typography>
+              <Typography variant="h5">Tiene documentacion observada y debe corregirla.</Typography>
+            </p>
+          }
+          {esSubsanado &&
+            <p>
+              <Typography variant="h4">DATOS CORREGIDOS</Typography>
+              <Typography variant="h6">Aguarde a que procesemos sus datos.</Typography>
+              <Typography variant="body1">
+                Enviaremos un mensaje cuando este procesada. <Link href="#opciones">Ver más opciones.</Link>
+              </Typography>
+            </p>
+          }
+        </Paper>
+
+        <br></br>
+        <p>
+          <Typography variant="h5">Acciones necesarias</Typography>
+        </p>
 
         <Grid container>
           <Grid item xs={12} md={8}>
-            {esSubsanado &&
-              <span>
-                <p>
-                  <Typography variant="h4">DATOS CORREGIDOS</Typography>
-                  <Typography variant="h6">Aguarde a que procesemos sus datos.</Typography>
-                </p>
-                <p>
-                  <Typography variant="body1">
-                    Enviaremos un mensaje cuando este procesada. <Link href="#opciones">Ver más opciones.</Link>
-                  </Typography>
-                </p>
+            <Typography variant="body1">
 
-                { false && 
-                <Paper elevation={0} className={classes.action}>
-                  <Grid container spacing={2}>
-                    <Grid item xs={9}>
-                      Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" className={classes.ok}></Chip>
-                    </Grid>
-                    <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
+              {esSubsanado &&
+              <Paper elevation={0} className={classes.action}>
+                <Grid container spacing={2}>
+                  <Grid item xs={9}>
+                    Certificado Único de Discapacidad (CDU)&nbsp;<Chip label="CORREGIDO" className={classes.ok}></Chip>
                   </Grid>
-                </Paper>
-                }
-              </span>
-            }
+                  <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
+                </Grid>
+              </Paper>
+              }
 
-            {!esSubsanado &&
+              {!esSubsanado &&
               <Paper elevation={0} className={classes.action}>
                 <Grid container spacing={2}>
                   <Grid item xs={9}>
                     Certificado Único de Discapacidad (CDU)
-                  <br></br>
+                <br></br>
                     <Typography variant="body2" color="secondary">El documento que se aportó no correponde al beneficiario de la solcitud.</Typography>
                   </Grid>
                   <Grid item xs={3}><Button variant="contained" color="primary" component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">CORREGIR</Button></Grid>
                 </Grid>
               </Paper>
-            }
+              }
+            </Typography>
           </Grid>
         </Grid>
-      </Paper>
-
-      <Paper className={classes.paper}>
-        <p><Typography variant="h4">SOLICITUD LICENCIA DE ESTACIONAMIENTO</Typography></p>
-
-        <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
 
         <br></br>
         <p>
@@ -148,7 +155,7 @@ function TramiteGestion3Page(props: any) {
                     <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/subsanar-cdu">COMPLETO</Button></Grid>
                   </Grid>
                 </Paper>
-            }
+              }
             </Typography>
           </Grid>
         </Grid>

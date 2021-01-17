@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles, Theme, createStyles, Toolbar, Typography, Button, Container, Box, Grid, Hidden, Paper, TextField, Divider, Link, Chip } from "@material-ui/core";
 import { Link as RouterLink, navigate, useLocation, useNavigate, useParams } from "@reach/router"
 import PlaceIcon from '@material-ui/icons/Place';
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme: Theme) =>
     ok: {
       backgroundColor: "#6c6",
     },
+    paperMessage: {
+      padding: theme.spacing(1),
+      margin: theme.spacing(2),
+      textAlign: "center",
+      backgroundColor: "#b0bfbf",
+    }
   }),
 );
 
@@ -28,24 +34,25 @@ function TramiteGestion2Page(props: any) {
   const classes = useStyles();
   const location = useLocation();
 
+
+  useEffect(()=> {
+    window.location.href="#top";
+  },[]);
+
   return (
-    <Container className={classes.container}>
-
-      <Paper className={classes.paper}>
-        <p>
-          <Typography variant="h4">SOLICITUD ENVIADA</Typography>
-          <Typography variant="h6">Aguarde a que procesemos sus datos.</Typography>
-        </p>
-        <p>
-          <Typography variant="body1">
-            Enviaremos un mensaje cuando este procesada. <Link href="#otras_acciones">Ver otras acciones.</Link>
-          </Typography>
-        </p>
-      </Paper>
-
+    <Container id="top" className={classes.container}>
       <Paper className={classes.paper}>
         <p><Typography variant="h4">SOLICITUD LICENCIA DE ESTACIONAMIENTO</Typography></p>
         <p><Typography variant="body1">La solicitud es para FEDERICO LUNA, DNI 24586843</Typography></p>
+
+        <Paper className={classes.paperMessage}>
+          <p >
+            <Typography variant="h5">SOLICITUD ENVIADA</Typography>
+            <Typography variant="h5">Aguarde a que procesemos sus datos.</Typography>
+            <Typography variant="body1">Puede realizar <Link href="#opciones">otras acciones.</Link></Typography>
+          </p>
+        </Paper>
+
 
         <br></br>
         <p>
@@ -66,7 +73,6 @@ function TramiteGestion2Page(props: any) {
                 <Grid container spacing={2}>
                   <Grid item md={9} xs={8}>
                     Libre Multa
-                    <Typography variant="body2"><Link href="#">Cambiar</Link></Typography>
                   </Grid>
                   <Grid item xs={3}><Button variant="contained" className={classes.ok} component={RouterLink} to="/pic/tramites/tramite-1/inicio-chequeo-1">COMPLETO</Button></Grid>
                 </Grid>
@@ -76,7 +82,6 @@ function TramiteGestion2Page(props: any) {
                 <Grid container spacing={2}>
                   <Grid item md={9} xs={8}>
                     Libre Deuda
-                    <Typography variant="body2"><Link href="#">Cambiar</Link></Typography>
                   </Grid>
                   <Grid item xs={3}><Button variant="contained" className={classes.ok}>COMPLETO</Button></Grid>
                 </Grid>
@@ -107,7 +112,6 @@ function TramiteGestion2Page(props: any) {
               <Grid container spacing={2}>
                 <Grid item md={9} xs={8}>
                   Pagar $ 267,00 <Chip label="PAGADO" className={classes.ok}></Chip>
-                  <Typography variant="body2"><Link>Cambiar</Link></Typography>
                 </Grid>
                 <Grid item xs={3}><Button variant="outlined" component={RouterLink} className={classes.ok} to="/pic/tramites/tramite-1/documentos/documento-cdu">COMPLETO</Button></Grid>
               </Grid>
@@ -141,7 +145,20 @@ function TramiteGestion2Page(props: any) {
 
       <Paper id="opciones" className={classes.paper}>
         <p>
-          <Typography variant="h5">MÁS OPCIONES</Typography>
+          <Typography variant="h4">SOLICITUD ENVIADA</Typography>
+          <Typography variant="h6">Aguarde a que procesemos sus datos.</Typography>
+        </p>
+        <p>
+          <Typography variant="body1">
+            Enviaremos un mensaje cuando este procesada.
+          </Typography>
+        </p>
+      </Paper>
+
+
+      <Paper id="opciones" className={classes.paper}>
+        <p>
+          <Typography variant="h4">MÁS OPCIONES</Typography>
         </p>
         <Grid container>
           <Grid item xs={12} md={8}>
@@ -172,7 +189,7 @@ function TramiteGestion2Page(props: any) {
         </Grid>
       </Paper>
 
-      <Button variant="text" href="/pic/tramites/tramite-1/gestion-3">Simular observación</Button>
+      <Button variant="text" component={RouterLink} to="/pic/tramites/tramite-1/gestion-3?corregir">Simular observación</Button>
 
     </Container>
 
