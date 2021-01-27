@@ -95,10 +95,17 @@ export default function App(props: any) {
   //const isWeb = window.location.href.indexOf("/web/") > 0;
   const isWeb = window.sessionStorage.getItem("mode") === "web";
 
+  const [isLogged, setIsLogged] = React.useState(false);
+  const toggleLogin = () => {
+    setIsLogged(!isLogged);
+  } 
+
   const web =
-    <WebLayout>
+    <span>
+      <Link onClick={toggleLogin}>Login on/off</Link>
+      <WebLayout logged={isLogged}>
         <Router basepath={process.env.PUBLIC_URL}>
-          <WebHomePage default path="/web/home"/>
+          <WebHomePage default path="/web/home" logged={isLogged}/>
           <WebBuscarPage path="/web/buscar"/>
           <WebTramitePage1 path="/web/tramite-1"/>
           <WebRequisitoPage1 path="/web/requisito-1"/>
@@ -122,8 +129,9 @@ export default function App(props: any) {
           <TramiteEnvioPage path="/tramites/tramite-1/envio"/>
           <TramiteDocumentoSubsanarPage path="/tramites/tramite-1/subsanar-cdu"/>
         </Router>
-    </WebLayout>
-
+        </WebLayout>
+    </span>
+    
   if (isWeb) {
     return web;
   }
