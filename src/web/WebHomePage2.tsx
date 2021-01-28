@@ -31,12 +31,14 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function WebHomePage(props: any) {
+function WebHomePage2(props: any) {
   const classes = useStyles();
   const logged = props.logged;
 
   const [showApps, setShowApps] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [active, setActive] = React.useState("Notificaciones");
+
 
   const togleShowApps = () => {
     setShowApps(!showApps);
@@ -49,6 +51,10 @@ function WebHomePage(props: any) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleActive = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    setActive(event.currentTarget.id);
+  }
 
 
   return (
@@ -147,10 +153,10 @@ function WebHomePage(props: any) {
         </Paper>
       }
 
-      {logged &&
+      {logged && active === "Notificaciones" &&
         <Paper className={classes.paper}>
           <p>
-            <Typography variant="h4">Notificaciones</Typography>
+            <Typography variant="h4">Notificaciones  |  <Link  id="MisGestiones" onClick={handleActive}>Mis Gestiones</Link></Typography>
             <Link href="#">Ver todas</Link> 
           </p>
 
@@ -177,10 +183,10 @@ function WebHomePage(props: any) {
         </Paper>
       }
 
-      {logged && 
+      {logged && active === "MisGestiones" &&
         <Paper className={classes.paper}>
           <p>
-            <Typography variant="h4">Mis Gestiones</Typography>
+          <Typography variant="h4">Mis Gestiones | <Link  id="Notificaciones" onClick={handleActive}>Notificaciones</Link></Typography>
             <Link href="#">Ver todas</Link>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <Link href="#">Ver mis registros</Link> 
@@ -405,7 +411,7 @@ function WebHomePage(props: any) {
                 <IconButton>
                   <StorefrontIcon color="primary" fontSize={"large"}></StorefrontIcon>
                 </IconButton>
-                <Typography variant="body1">Simulados Comercios</Typography>
+                <Typography variant="body1">Comercios</Typography>
               </div>
             </Grid>
 
@@ -425,4 +431,4 @@ function WebHomePage(props: any) {
   );
 }
 
-export default WebHomePage;
+export default WebHomePage2;

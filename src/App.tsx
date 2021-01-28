@@ -16,6 +16,7 @@ import BienesPage from './cuentas/BienesPage';
 import LicenciasPage from './cuentas/LicenciasPage';
 import WebLayout from './layout/WebLayout';
 import WebHomePage from './web/WebHomePage';
+import WebHomePage2 from './web/WebHomePage2';
 import WebBuscarPage from './web/WebBuscarPage';
 import WebTramitePage1 from './web/WebTramitePage1';
 import WebRequisitoPage1 from './web/WebRequisitoPage1';
@@ -106,6 +107,7 @@ export default function App(props: any) {
       <WebLayout logged={isLogged}>
         <Router basepath={process.env.PUBLIC_URL}>
           <WebHomePage default path="/web/home" logged={isLogged}/>
+          <WebHomePage2 path="/web/home2" logged={isLogged}/>
           <WebBuscarPage path="/web/buscar"/>
           <WebTramitePage1 path="/web/tramite-1"/>
           <WebRequisitoPage1 path="/web/requisito-1"/>

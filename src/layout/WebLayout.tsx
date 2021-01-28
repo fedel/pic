@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button, Menu, MenuItem } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,7 +22,21 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function WebLayout(props: any) {
     const classes = useStyles();
-
+    const [showApps, setShowApps] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  
+    const togleShowApps = () => {
+      setShowApps(!showApps);
+    }
+  
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+  
     return (
         <Container className={classes.container} maxWidth="md">
             
@@ -39,7 +53,7 @@ function WebLayout(props: any) {
                     
                     {props.logged && 
                     <Grid item xs={2} style={{textAlign: "right"}}>
-                        <Typography variant="body1"><Link href="#">Federico Luna</Link></Typography>
+                        <Typography variant="body1"><Link href="#" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Federico Luna</Link></Typography>
                         <Typography variant="caption">Perfil</Typography>
                     </Grid>
                     }
@@ -51,6 +65,19 @@ function WebLayout(props: any) {
                     </Grid>
                     }
                 </Grid>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}>Mis Datos</MenuItem>
+                    <MenuItem onClick={handleClose}>Mis Documentos</MenuItem>
+                    <MenuItem onClick={handleClose}>Apoderatos</MenuItem>
+                </Menu>
+
+
             </Paper>
 
             <Container className={classes.container2}>
