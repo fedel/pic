@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
         backgroundColor: "#fff",
-        height: "80px",
+        height: "110px",
+        borderBottom: "solid 3px #0066cc",
     },
     paper: {
       padding: theme.spacing(1),
@@ -43,11 +44,10 @@ function WebLayout(props: any) {
             <Paper className={classes.paper} elevation={0}>
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
-                        rosario.gob.ar
+                        <img src="https://www.rosario.gob.ar/estilos/iframes/assets/img/logo.svg" title="Logo de Rosario" alt="Logo de Rosario"></img>
                     </Grid>
                     <Grid item xs={8} style={{textAlign: "center"}}>
-                        <Typography variant="h5">
-                        ...
+                        <Typography variant="h2" color="primary">
                         </Typography>
                     </Grid>
                     
@@ -59,9 +59,10 @@ function WebLayout(props: any) {
                     }
                     {!props.logged && 
                     <Grid item xs={2} style={{textAlign: "right"}}>
-                        <Typography variant="body1"><Link href="#">Registrate</Link></Typography>
                         <br></br>
-                        <Typography variant="body1"><Link href="#">Login</Link></Typography>
+                        <br></br>
+                        <Typography variant="body1"><Link href="#"><b>Registrate</b></Link></Typography>
+                        <Typography variant="body1" style={{marginTop: "6px"}}><Link href="#">Ingresa</Link></Typography>
                     </Grid>
                     }
                 </Grid>
@@ -82,7 +83,8 @@ function WebLayout(props: any) {
 
             <Container className={classes.container2}>
                 <Paper className={classes.paper}>
-                    <p><Typography color="primary" variant="h6">COVID19: Conocé los síntomas, cómo cuidarte, preguntas frecuentes, normativa relacionada.</Typography></p>
+                    <p><Typography color="primary" variant="h6"><Link href="#">COVID19 | Síntomas y como cuidarte.</Link></Typography></p>
+                    <p><Typography color="primary" variant="h6"><Link href="#">SUSTENTABLE | Humedales, transporte y ...</Link></Typography></p>
                     
                     {props.logged &&
                         <span>

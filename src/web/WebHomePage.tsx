@@ -12,6 +12,7 @@ import StorefrontIcon from "@material-ui/icons/StorefrontOutlined";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import PlayListAddIcon from "@material-ui/icons/PlaylistAddCheck";
 import DescriptionIcon from "@material-ui/icons/DescriptionOutlined";
+import PeopleIcon from "@material-ui/icons/PeopleAlt";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -57,22 +58,11 @@ function WebHomePage(props: any) {
       {logged &&
         <Paper className={classes.paper}>
           <Grid container spacing={2}>
-            <Grid item sm={2}>
-              <div style={{textAlign: "center"}}>
-              <IconButton>
-                <CarIcon color="primary" fontSize={"large"}></CarIcon>
-                </IconButton>
-                <Typography variant="body1">Estacionamiento</Typography>
-              </div>
-            </Grid>
 
             <Grid item sm={2}>
-              <div style={{textAlign: "center"}}>
-              <IconButton>
-                <BikeIcon color="primary" fontSize={"large"}></BikeIcon>
-                </IconButton>
-                <Typography variant="body1">Bicicletas</Typography>
-              </div>
+                <div style={{textAlign: "center"}}>
+                  <Typography variant="body1">&nbsp;</Typography>
+                </div>
             </Grid>
 
             <Grid item sm={2}>
@@ -103,44 +93,17 @@ function WebHomePage(props: any) {
             </Grid>
 
             <Grid item sm={2}>
-              <div style={{textAlign: "center"}}>
-                <IconButton onClick={togleShowApps}>
-                  <MoreIcon color="primary" fontSize={"large"} ></MoreIcon>
-                </IconButton>
-                <Typography variant="body1">Más</Typography>
-              </div>
+                <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <PeopleIcon color="primary" fontSize={"large"}></PeopleIcon>
+                  </IconButton>
+                  <Typography variant="body1">Apoderados</Typography>
+                </div>
             </Grid>
           </Grid>
 
           {showApps &&
             <Grid container spacing={2} style={{paddingTop: 16}}>
-              <Grid item sm={2}>
-                <div style={{textAlign: "center"}}>
-                <IconButton>
-                  <CarIcon color="primary" fontSize={"large"}></CarIcon>
-                  </IconButton>
-                  <Typography variant="body1">Tributos</Typography>
-                </div>
-              </Grid>
-
-              <Grid item sm={2}>
-              <div style={{textAlign: "center"}}>
-                <IconButton>
-                  <StorefrontIcon color="primary" fontSize={"large"}></StorefrontIcon>
-                </IconButton>
-                <Typography variant="body1">Comercios</Typography>
-              </div>
-              </Grid>
-
-              <Grid item sm={2}>
-                <div style={{textAlign: "center"}}>
-                <IconButton>
-                  <ProfileIcon color="primary" fontSize={"large"}></ProfileIcon>
-                  </IconButton>
-                  <Typography variant="body1">Multas</Typography>
-                </div>
-              </Grid>
-
             </Grid>
           }
 
@@ -379,7 +342,6 @@ function WebHomePage(props: any) {
         </Grid>
       </Paper>
 
-
       <Paper className={classes.paper}>
           <Grid container spacing={2}>
             <Grid item sm={2}>
@@ -409,9 +371,56 @@ function WebHomePage(props: any) {
               </div>
             </Grid>
 
+            { logged &&
+              <React.Fragment>
+                <Grid item sm={2}>
+                  <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <CarIcon color="primary" fontSize={"large"}></CarIcon>
+                    </IconButton>
+                    <Typography variant="body1">Estacionamiento</Typography>
+                  </div>
+                </Grid>
+
+                <Grid item sm={2}>
+                  <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <BikeIcon color="primary" fontSize={"large"}></BikeIcon>
+                    </IconButton>
+                    <Typography variant="body1">Bicicletas</Typography>
+                  </div>
+                </Grid>
+
+                <Grid item sm={2}>
+                  <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <CarIcon color="primary" fontSize={"large"}></CarIcon>
+                    </IconButton>
+                    <Typography variant="body1">Tributos</Typography>
+                  </div>
+                </Grid>
+
+                <Grid item sm={2}>
+                <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <StorefrontIcon color="primary" fontSize={"large"}></StorefrontIcon>
+                  </IconButton>
+                  <Typography variant="body1">Comercios</Typography>
+                </div>
+                </Grid>
+
+                <Grid item sm={2}>
+                  <div style={{textAlign: "center"}}>
+                  <IconButton>
+                    <ProfileIcon color="primary" fontSize={"large"}></ProfileIcon>
+                    </IconButton>
+                    <Typography variant="body1">Multas</Typography>
+                  </div>
+                </Grid>
+              </React.Fragment>
+            }
           </Grid>
         </Paper>
-
 
       <Paper className={classes.paper}>
         otra...

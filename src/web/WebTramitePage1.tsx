@@ -58,7 +58,7 @@ function WebTramitePage1(props: any) {
           <Paper className={classes.paper}>
             <p><Typography variant="body2">Seccion 1 / Sub Seccion 2 / Trámite 1</Typography></p>
             
-            <p><Typography variant="h3">Libre stacionamiento para personas con discapacidad</Typography></p>
+            <p><Typography variant="h3">Estacionamiento para personas con discapacidad</Typography></p>
             <p>
               <Typography variant="body1">Franquicia que se otorga a personas con discapacidad que padezcan alteraciones que reduzcan considerablemente su movilidad. La franquicia es respecto a la persona y por lo tanto transferible al vehículo en el que se movilice. Habilita a estacionar en sectores tarifados de manera gratuita.
               </Typography>
