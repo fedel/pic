@@ -38,6 +38,8 @@ import TramiteEnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 import TramiteInicioTitularDniPage1 from './tramites/tramite-1/TramiteInicioTitularDniPage copy';
 import Tramite1InicioConfirmacionPage from './tramites/tramite-1/Tramite1ConfirmacionPage';
 import TramiteDocumentoSubsanarPage from './tramites/tramite-1/TramiteDocumentoSubsanarPage';
+import WebNotificacionPage from './noti/WebNotificacion';
+import WebMensajePage from './noti/WebMensaje';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -113,6 +115,9 @@ export default function App(props: any) {
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
+          
+          <WebNotificacionPage path="/noti/notificacion/noti1" logged={isLogged}/>
+          <WebMensajePage path="/noti/mensaje/msg1" logged={isLogged}/>
 
           <Tramite1InicioTitularPage path="/tramites/tramite-1/inicio-titular"/>
           <TramiteInicioTitularDniPage1 path="/tramites/tramite-1/inicio-titular-dni"/>

@@ -1,5 +1,9 @@
 import React from 'react';
 import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button, Menu, MenuItem } from "@material-ui/core";
+import { Link as RouterLink, navigate } from "@reach/router"
+import MessageIcon from '@material-ui/icons/MailOutline';
+import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
+import NotificationImportantOutlinedIcon from '@material-ui/icons/NotificationImportant';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,7 +48,9 @@ function WebLayout(props: any) {
             <Paper className={classes.paper} elevation={0}>
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
-                        <img src="https://www.rosario.gob.ar/estilos/iframes/assets/img/logo.svg" title="Logo de Rosario" alt="Logo de Rosario"></img>
+                        <Link component={RouterLink} to="/pic/web/home">
+                            <img src="https://www.rosario.gob.ar/estilos/iframes/assets/img/logo.svg" title="Logo de Rosario" alt="Logo de Rosario"></img>
+                        </Link>
                     </Grid>
                     <Grid item xs={8} style={{textAlign: "center"}}>
                         <Typography variant="h2" color="primary">
@@ -82,19 +88,20 @@ function WebLayout(props: any) {
             </Paper>
 
             <Container className={classes.container2}>
+                {!props.logged &&
                 <Paper className={classes.paper}>
                     <p><Typography color="primary" variant="h6"><Link href="#">COVID19 | Síntomas y como cuidarte.</Link></Typography></p>
                     <p><Typography color="primary" variant="h6"><Link href="#">SUSTENTABLE | Humedales, transporte y ...</Link></Typography></p>
-                    
-                    {props.logged &&
-                        <span>
-                            <p><Typography color="primary" variant="body1"><Link href="#">{'=>'} El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
-                            <p><Typography color="primary" variant="body1"><Link href="#">{'=>'} Tu licencia de conducir esta por vencer. Ingresa aquí para renovarla.</Link></Typography></p>
-                            <p><Link>Ver Todos...</Link></p>
-                        </span>
-                    }
-
                 </Paper>
+                }
+
+                {props.logged &&
+                <Paper className={classes.paper}>
+                    <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link></Typography></p>
+                    <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
+                    <p><Typography color="primary" variant="body1"><MessageIcon style={{verticalAlign: "middle"}}></MessageIcon> <Link component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
+                </Paper>
+                }
             </Container>
 
             { props.children }

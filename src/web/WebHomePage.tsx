@@ -106,12 +106,11 @@ function WebHomePage(props: any) {
             <Grid container spacing={2} style={{paddingTop: 16}}>
             </Grid>
           }
-
         </Paper>
       }
 
       {logged &&
-        <Paper className={classes.paper}>
+        <Paper id="notificaciones" className={classes.paper}>
           <p>
             <Typography variant="h4">Notificaciones</Typography>
             <Link href="#">Ver todas</Link> 
@@ -120,8 +119,8 @@ function WebHomePage(props: any) {
           <Paper elevation={0} className={classes.action}>
             <Grid container spacing={2}>
               <Grid item md={9} xs={8}>
-                <Typography variant="h6"><Link href="#">Notificacion de Infracción el día 12/01/2021</Link> <Chip color="secondary" size="small" label="Importante"></Chip></Typography>
-                <Typography variant="body2">Mediante la presente se deja constancia que el día 12 de enero 2020 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</Typography>
+                <Typography variant="h6"><Link component={RouterLink} to="/pic/noti/notificacion/noti1">Notificacion de Infracción.</Link> <Chip color="secondary" size="small" label="Nuevo"></Chip></Typography>
+                <Typography variant="body1">7 de Febrero 2021</Typography>
               </Grid>
               <Grid item xs={3}></Grid>
             </Grid>
@@ -130,8 +129,8 @@ function WebHomePage(props: any) {
           <Paper elevation={0} className={classes.action}>
             <Grid container spacing={2}>
               <Grid item md={9} xs={8}>
-                <Typography variant="h6"><Link href="#">Aviso de envio deuda a Judicial 3/10/2020</Link> <Chip color="secondary" size="small" label="Importante"></Chip></Typography>
-                <Typography variant="body2">Mediante la presente se deja constancia que el día 12 de enero 2020 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</Typography>
+                <Typography variant="h6"><Link href="#">Envio de deuda a Judiciales</Link></Typography>
+                <Typography variant="body1">12 de Enero 2019</Typography>
               </Grid>
               <Grid item xs={3}></Grid>
             </Grid>
@@ -147,17 +146,9 @@ function WebHomePage(props: any) {
             <Link href="#">Ver todas</Link>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <Link href="#">Ver mis registros</Link> 
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <Link href="#">Ver mensajes</Link> 
           </p>
-
-          <Paper elevation={0} className={classes.action}>
-            <Grid container spacing={2}>
-              <Grid item md={9} xs={8}>
-                <Typography variant="h6"><Link href="#">Gestionar infracción de tránsito 12/01/2021</Link> <Chip size="small" label="Pendiente"></Chip></Typography>
-                <Typography variant="body2">El 12 de enero te realizaron una multa por...</Typography>
-              </Grid>
-              <Grid item xs={3}><Button startIcon={<MoreVertIcon/>} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}></Button></Grid>
-            </Grid>
-          </Paper>
 
           <Paper elevation={0} className={classes.action}>
             <Grid container spacing={2}>
@@ -166,16 +157,6 @@ function WebHomePage(props: any) {
                 <Typography variant="body2">Enviaste la solicitud el 17/12/2020</Typography>
               </Grid>
               <Grid item xs={3}><Button startIcon={<MoreVertIcon/>}></Button></Grid>
-            </Grid>
-          </Paper>
-
-          <Paper elevation={0} className={classes.action}>
-            <Grid container spacing={2}>
-              <Grid item md={9} xs={8}>
-                <Typography variant="h6"><Link href="#">Envio de deuda a judicial 31/12/2020</Link> <Chip size="small" label="Pendiente"></Chip></Typography>
-                <Typography variant="body2">Evita el envio de deuda a judicial antes del 31 de diciembre.</Typography>
-              </Grid>
-              <Grid item xs={3}><Button startIcon={<MoreVertIcon/>} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}></Button></Grid>
             </Grid>
           </Paper>
 
