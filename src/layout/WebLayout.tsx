@@ -98,8 +98,8 @@ function WebLayout(props: any) {
                 {props.logged &&
                 <Paper className={classes.paper}>
                     <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link></Typography></p>
-                    <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
                     <p><Typography color="primary" variant="body1"><MessageIcon style={{verticalAlign: "middle"}}></MessageIcon> <Link component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
+                    <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
                 </Paper>
                 }
             </Container>
