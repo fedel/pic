@@ -73,7 +73,7 @@ function WebNotificacionPage(props: any) {
           </p>
 
           <p>
-            <embed src="http://mozilla.github.io/pdf.js/web/viewer.html" width="100%" height="600" type="application/pdf"></embed>
+            <embed src="https://mozilla.github.io/pdf.js/web/viewer.html" width="100%" height="600" type="application/pdf"></embed>
           </p>
 
           <p>
