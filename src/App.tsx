@@ -19,6 +19,7 @@ import WebHomePage from './web/WebHomePage';
 import WebHomePage2 from './web/WebHomePage2';
 import WebBuscarPage from './web/WebBuscarPage';
 import WebTramitePage1 from './web/WebTramitePage1';
+import WebTramitePage2 from './web/WebTramitePage2';
 import WebRequisitoPage1 from './web/WebRequisitoPage1';
 import WebRequisitoPage2 from './web/WebRequisitoPage2';
 import WebLoginPage from './web/WebLoginPage';
@@ -38,6 +39,16 @@ import TramiteEnvioPage from './tramites/tramite-1/TramiteEnvioPage';
 import TramiteInicioTitularDniPage1 from './tramites/tramite-1/TramiteInicioTitularDniPage copy';
 import Tramite1InicioConfirmacionPage from './tramites/tramite-1/Tramite1ConfirmacionPage';
 import TramiteDocumentoSubsanarPage from './tramites/tramite-1/TramiteDocumentoSubsanarPage';
+
+import Tramite2InicioDatosPage from './tramites/tramite-2/TramiteInicioDatosPage';
+import Tramite2InicioExitoPage from './tramites/tramite-2/TramiteInicioExitoPage';
+import Tramite2InicioConfirmacionPage from './tramites/tramite-2/Tramite1ConfirmacionPage';
+import Tramite2Gestion1Page from './tramites/tramite-2/TramiteGestion1Page';
+import Tramite2Gestion2Page from './tramites/tramite-2/TramiteGestion2Page';
+import Tramite2Gestion3Page from './tramites/tramite-2/TramiteGestion3Page';
+import Tramite2Gestion4Page from './tramites/tramite-2/TramiteGestion4Page';
+import Tramite2EnvioPage from './tramites/tramite-2/TramiteEnvioPage';
+
 import WebNotificacionPage from './noti/WebNotificacion';
 import WebMensajePage from './noti/WebMensaje';
 
@@ -112,6 +123,7 @@ export default function App(props: any) {
           <WebHomePage2 path="/web/home2" logged={isLogged}/>
           <WebBuscarPage path="/web/buscar"/>
           <WebTramitePage1 path="/web/tramite-1"/>
+          <WebTramitePage2 path="/web/tramite-2"/>
           <WebRequisitoPage1 path="/web/requisito-1"/>
           <WebRequisitoPage2 path="/web/requisito-2"/>
           <WebLoginPage path="/web/login"/>
@@ -135,6 +147,19 @@ export default function App(props: any) {
           <TramiteGestion4Page path="/tramites/tramite-1/gestion-4"/>
           <TramiteEnvioPage path="/tramites/tramite-1/envio"/>
           <TramiteDocumentoSubsanarPage path="/tramites/tramite-1/subsanar-cdu"/>
+
+
+          <Tramite2InicioDatosPage path="/tramites/tramite-2/inicio-datos"/>
+          <Tramite2InicioConfirmacionPage path="/tramites/tramite-2/inicio-confirmacion"/>
+          <Tramite2InicioExitoPage path="/tramites/tramite-2/inicio-exito"/>
+          <Tramite2Gestion1Page path="/tramites/tramite-2/gestion"/>
+          <Tramite2Gestion2Page path="/tramites/tramite-2/gestion-2"/>
+          <Tramite2Gestion3Page path="/tramites/tramite-2/gestion-3"/>
+          <Tramite2Gestion4Page path="/tramites/tramite-2/gestion-4"/>
+          <Tramite2EnvioPage path="/tramites/tramite-2/envio"/>
+
+
+
         </Router>
         </WebLayout>
     </span>
