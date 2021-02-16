@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button, Menu, MenuItem } from "@material-ui/core";
+import { makeStyles, Theme, createStyles, Container, Grid, Typography, Paper, Link, Button, Menu, MenuItem, Chip } from "@material-ui/core";
 import { Link as RouterLink, navigate } from "@reach/router"
 import MessageIcon from '@material-ui/icons/MailOutline';
 import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
@@ -97,7 +97,7 @@ function WebLayout(props: any) {
 
                 {props.logged &&
                 <Paper className={classes.paper}>
-                    <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link></Typography></p>
+                    <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link>&nbsp;<Chip color="secondary" size="small" label="NOTIFICACIÓN"></Chip></Typography></p>
                     <p><Typography color="primary" variant="body1"><MessageIcon style={{verticalAlign: "middle"}}></MessageIcon> <Link component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
                     <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
                 </Paper>
