@@ -29,6 +29,13 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "6pt",
       borderBottom: "solid 3px #aaa",
     },
+    most: {
+      backgroundColor: theme.palette.primary.main,
+      paddingLeft: theme.spacing(1),
+    },
+    reverse: {
+      color: "#fff",
+    },
   }),
 );
 
@@ -164,7 +171,7 @@ function WebHomePage(props: any) {
             <Grid container spacing={2}>
               <Grid item md={9} xs={8}>
                 <Typography variant="h6"><Link href="#">Columna caida en San Juan 473</Link> <Chip size="small" label="Finalizado"></Chip></Typography>
-                <Typography variant="body2">El 7/1/2021 se resolvio así y asá.</Typography>
+                <Typography variant="body2">El 7/1/2021 finalizó.</Typography>
               </Grid>
               <Grid item xs={3}><Button startIcon={<MoreVertIcon/>}></Button></Grid>
             </Grid>
@@ -197,12 +204,11 @@ function WebHomePage(props: any) {
       }
 
       <Paper className={classes.paper}>
-
         <Grid container>
           <Grid item sm={12} md={7}>
             <form noValidate autoComplete="off" >
               <p><Typography variant="h4">Servicios de la Municipalidad</Typography></p>
-              <p><Typography variant="body1">Podes buscar servicios, trámites y todo lo que necestias de la municipalidad.</Typography></p>
+              <p><Typography variant="body1">Podes buscar servicios, trámites y todo lo que necesitas de la municipalidad.</Typography></p>
               <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{ width: "420px" }} />
               <Button color="primary" variant="contained" style={{ height: 56 }} component={RouterLink} to="/pic/web/buscar">Buscar</Button>
             </form>
@@ -220,14 +226,15 @@ function WebHomePage(props: any) {
             }
 
           </Grid>
-          <Grid item sm={12} md={5}>
-            <p><Typography variant="h6">Sugeridos</Typography></p>
+        
+          <Grid item sm={12} md={5} className={classes.most}>
+            <p><Typography className={classes.reverse} variant="h6">Sugeridos</Typography></p>
             <Typography variant="body1">
-              <p><Link>+ Link 1</Link></p>
-              <p><Link>+ Link 2</Link></p>
-              <p><Link>+ Link 3</Link></p>
-              <p><Link>+ Link 4</Link></p>
-              <p><Link>+ Link 4</Link></p>
+              <p><Link className={classes.reverse} >+ Link 1</Link></p>
+              <p><Link className={classes.reverse} >+ Link 2</Link></p>
+              <p><Link className={classes.reverse} >+ Link 3</Link></p>
+              <p><Link className={classes.reverse} >+ Link 4</Link></p>
+              <p><Link className={classes.reverse} >+ Link 4</Link></p>
             </Typography>
           </Grid>
         </Grid>
@@ -274,7 +281,7 @@ function WebHomePage(props: any) {
 
           <Grid item sm={12} md={4}>
             <p>
-              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación y transparencia</Link></Typography>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Salud</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
@@ -316,7 +323,7 @@ function WebHomePage(props: any) {
           </Grid>
           <Grid item sm={12} md={4}>
             <p>
-              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Otros</Link></Typography>
+              <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación y transparencia</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
@@ -348,7 +355,7 @@ function WebHomePage(props: any) {
                 <IconButton>
                   <StorefrontIcon color="primary" fontSize={"large"}></StorefrontIcon>
                 </IconButton>
-                <Typography variant="body1">Simulados Comercios</Typography>
+                <Typography variant="body1">Comercios</Typography>
               </div>
             </Grid>
 

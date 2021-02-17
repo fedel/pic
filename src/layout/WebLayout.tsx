@@ -4,23 +4,27 @@ import { Link as RouterLink, navigate } from "@reach/router"
 import MessageIcon from '@material-ui/icons/MailOutline';
 import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
 import NotificationImportantOutlinedIcon from '@material-ui/icons/NotificationImportant';
+import theme from '../theme';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {        
-        padding: 0,        
+        padding: 0,
     },
     container2: {
         padding: 0,
     },
     header: {
-        backgroundColor: "#fff",
-        height: "110px",
-        borderBottom: "solid 3px #0066cc",
+        height: "90px",
+        
+    },
+    line: {
+        height: "6px",
+        backgroundColor: "#0066cc",
     },
     paper: {
-      padding: theme.spacing(1),
-      margin: theme.spacing(2),
+      margin: theme.spacing(0),
+      backgroundColor: "#000",
     },
   }),
 );
@@ -43,13 +47,20 @@ function WebLayout(props: any) {
     };
   
     return (
-        <Container className={classes.container} maxWidth="md">
-            
-            <Paper className={classes.paper} elevation={0}>
+        <React.Fragment>
+        <div style={{backgroundColor: "#000"}}>
+            <div className={classes.paper}>
+                <Container className={classes.container} maxWidth="md">
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
                         <Link component={RouterLink} to="/pic/web/home">
-                            <img src="https://www.rosario.gob.ar/estilos/iframes/assets/img/logo.svg" title="Logo de Rosario" alt="Logo de Rosario"></img>
+                            <img src="https://t-datos.rosario.gob.ar/sites/t-datos.rosario.gob.ar/themes/custom/rosariodatos_theme/images/logo_mobile.svg"
+                                width="90%" height="90%"
+                                x-src="https://www.rosario.gob.ar/estilos/iframes/assets/img/logo.svg" title="Logo de Rosario" alt="Logo de Rosario">
+
+                                    
+                                </img>
+                            
                         </Link>
                     </Grid>
                     <Grid item xs={8} style={{textAlign: "center"}}>
@@ -59,16 +70,16 @@ function WebLayout(props: any) {
                     
                     {props.logged && 
                     <Grid item xs={2} style={{textAlign: "right"}}>
-                        <Typography variant="body1"><Link href="#" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Federico Luna</Link></Typography>
-                        <Typography variant="caption">Perfil</Typography>
+                        <br></br>
+                        <Typography variant="body1"><Link style={{color: "white"}} href="#" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Juan Pedro</Link></Typography>
+                        <Typography variant="caption" style={{color: "white"}} >Mis Datos</Typography>
                     </Grid>
                     }
                     {!props.logged && 
                     <Grid item xs={2} style={{textAlign: "right"}}>
                         <br></br>
-                        <br></br>
-                        <Typography variant="body1"><Link href="#"><b>Registrate</b></Link></Typography>
-                        <Typography variant="body1" style={{marginTop: "6px"}}><Link href="#">Ingresa</Link></Typography>
+                        <Typography variant="body1" style={{color: "white"}}><Link href="#" style={{color: "white"}}><b>Registrate</b></Link></Typography>
+                        <Typography variant="body1" style={{color: "white", marginTop: "6px"}}><Link href="#" style={{color: "white"}}>Ingresa</Link></Typography>
                     </Grid>
                     }
                 </Grid>
@@ -84,28 +95,37 @@ function WebLayout(props: any) {
                     <MenuItem onClick={handleClose}>Apoderatos</MenuItem>
                 </Menu>
 
+                </Container>
+            </div>
 
-            </Paper>
+            <div className={classes.line}></div>
 
-            <Container className={classes.container2}>
-                {!props.logged &&
-                <Paper className={classes.paper}>
-                    <p><Typography color="primary" variant="h6"><Link href="#">COVID19 | Síntomas y como cuidarte.</Link></Typography></p>
-                    <p><Typography color="primary" variant="h6"><Link href="#">SUSTENTABLE | Humedales, transporte y ...</Link></Typography></p>
-                </Paper>
-                }
+            <div className={classes.paper} >
+                <Container className={classes.container} maxWidth="md">
+                    {props.covid && !props.logged &&
+                    <div style={{paddingBottom: "1pt"}}>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">COVID19 | <span style={{fontWeight: "normal", fontSize: "14pt"}}>Síntomas y como cuidarte</span></Link></Typography></p>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">SUSTENTABLE | <span style={{fontWeight: "normal", fontSize: "14pt"}}>Humedales, transporte y ...</span></Link></Typography></p>
+                    </div>
+                    }
 
-                {props.logged &&
-                <Paper className={classes.paper}>
-                    <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link>&nbsp;<Chip color="secondary" size="small" label="NOTIFICACIÓN"></Chip></Typography></p>
-                    <p><Typography color="primary" variant="body1"><MessageIcon style={{verticalAlign: "middle"}}></MessageIcon> <Link component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
-                    <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
-                </Paper>
-                }
+                    {props.covid && props.logged &&
+                    <div style={{paddingBottom: "1pt"}}>
+                        <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{color: "#fff", verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link style={{color: "white"}} href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link>&nbsp;<Chip color="default" size="small" label="NOTIFICACIÓN"></Chip></Typography></p>
+                        <p><Typography color="primary" variant="body1"><MessageIcon style={{color: "#fff", verticalAlign: "middle"}}></MessageIcon> <Link style={{color: "white"}} component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
+                        <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{color: "#fff", verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link style={{color: "white"}}>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
+                    </div>
+                    }
+                </Container>
+            </div>
+            </div>
+
+            <Container className={classes.container} maxWidth="md">
+                <div style={{marginLeft: theme.spacing(-3), marginRight: theme.spacing(-3)}}>
+                { props.children }
+                </div>
             </Container>
-
-            { props.children }
-        </Container>
+        </React.Fragment>
     )
 }
   

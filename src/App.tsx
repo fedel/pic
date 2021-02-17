@@ -114,10 +114,14 @@ export default function App(props: any) {
     setIsLogged(!isLogged);
   } 
 
+  const [covid, setCovid] = React.useState(true);
+  const toggleCovid = () => {
+    setCovid(!covid);
+  } 
+
   const web =
     <span>
-      <Link onClick={toggleLogin}>Login on/off</Link>
-      <WebLayout logged={isLogged}>
+      <WebLayout logged={isLogged} covid={covid}>
         <Router basepath={process.env.PUBLIC_URL}>
           <WebHomePage default path="/web/home" logged={isLogged}/>
           <WebHomePage2 path="/web/home2" logged={isLogged}/>
@@ -148,7 +152,6 @@ export default function App(props: any) {
           <TramiteEnvioPage path="/tramites/tramite-1/envio"/>
           <TramiteDocumentoSubsanarPage path="/tramites/tramite-1/subsanar-cdu"/>
 
-
           <Tramite2InicioDatosPage path="/tramites/tramite-2/inicio-datos"/>
           <Tramite2InicioConfirmacionPage path="/tramites/tramite-2/inicio-confirmacion"/>
           <Tramite2InicioExitoPage path="/tramites/tramite-2/inicio-exito"/>
@@ -157,11 +160,17 @@ export default function App(props: any) {
           <Tramite2Gestion3Page path="/tramites/tramite-2/gestion-3"/>
           <Tramite2Gestion4Page path="/tramites/tramite-2/gestion-4"/>
           <Tramite2EnvioPage path="/tramites/tramite-2/envio"/>
-
-
-
         </Router>
         </WebLayout>
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <p>.............................................</p>
+        <Link onClick={toggleLogin}>Login on/off</Link>
+        &nbsp;
+        <Link onClick={toggleCovid}>Covid on/off</Link>
+
     </span>
     
   if (isWeb) {

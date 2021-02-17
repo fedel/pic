@@ -3,6 +3,11 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
 const theme = createMuiTheme({
+  props: {
+    MuiPaper: {
+      elevation: 0,
+    },
+  },
   typography: {
     h1: {
       fontFamily: "Montserrat",
@@ -52,8 +57,8 @@ const theme = createMuiTheme({
     },
     background: {
       /*default: '#e1e2e1',*/
-      default: '#f5f5f6',
-
+      /*default: '#f5f5f6',*/
+      default: 'fff',
     },
   },
 });
