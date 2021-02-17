@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
     line: {
         height: "6px",
         backgroundColor: "#0066cc",
+        padding: 0,
+        margin:0,
     },
     paper: {
       margin: theme.spacing(0),
@@ -48,8 +50,8 @@ function WebLayout(props: any) {
   
     return (
         <React.Fragment>
-        <div style={{backgroundColor: "#000"}}>
-            <div className={classes.paper}>
+        <div style={{backgroundColor: "#000", paddingLeft: theme.spacing(1), paddingRight: theme.spacing(1),}}>
+            <div className={classes.paper} style={{backgroundColor: "#000"}}>
                 <Container className={classes.container} maxWidth="md">
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
@@ -63,7 +65,7 @@ function WebLayout(props: any) {
                             
                         </Link>
                     </Grid>
-                    <Grid item xs={8} style={{textAlign: "center"}}>
+                    <Grid item xs={7} sm={8} style={{textAlign: "center"}}>
                         <Typography variant="h2" color="primary">
                         </Typography>
                     </Grid>
@@ -78,8 +80,8 @@ function WebLayout(props: any) {
                     {!props.logged && 
                     <Grid item xs={2} style={{textAlign: "right"}}>
                         <br></br>
-                        <Typography variant="body1" style={{color: "white"}}><Link href="#" style={{color: "white"}}><b>Registrate</b></Link></Typography>
-                        <Typography variant="body1" style={{color: "white", marginTop: "6px"}}><Link href="#" style={{color: "white"}}>Ingresa</Link></Typography>
+                        <Typography variant="body1" style={{color: "white"}}><Link href="#" style={{color: "white"}}><b>Registrate&nbsp;&nbsp;&nbsp;&nbsp;</b></Link></Typography>
+                        <Typography variant="body1" style={{color: "white", marginTop: "6px"}}><Link href="#" style={{color: "white"}}>Ingresa&nbsp;&nbsp;&nbsp;</Link></Typography>
                     </Grid>
                     }
                 </Grid>
@@ -104,8 +106,8 @@ function WebLayout(props: any) {
                 <Container className={classes.container} maxWidth="md">
                     {props.covid && !props.logged &&
                     <div style={{paddingBottom: "1pt"}}>
-                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">COVID19 | <span style={{fontWeight: "normal", fontSize: "14pt"}}>Síntomas y como cuidarte</span></Link></Typography></p>
-                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">SUSTENTABLE | <span style={{fontWeight: "normal", fontSize: "14pt"}}>Humedales, transporte y ...</span></Link></Typography></p>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">COVID19</Link> | <div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt", wordBreak: "keep-all"}}>Síntomas y como cuidarte</div></Typography></p>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">SUSTENTABLE</Link> | <div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt"}}>Humedales, transporte y ...</div></Typography></p>
                     </div>
                     }
 
@@ -118,10 +120,10 @@ function WebLayout(props: any) {
                     }
                 </Container>
             </div>
-            </div>
+        </div>
 
             <Container className={classes.container} maxWidth="md">
-                <div style={{marginLeft: theme.spacing(-3), marginRight: theme.spacing(-3)}}>
+                <div style={{marginLeft: theme.spacing(-3), marginRight: theme.spacing(-3), paddingLeft: theme.spacing(1), paddingRight: theme.spacing(1),}}>
                 { props.children }
                 </div>
             </Container>

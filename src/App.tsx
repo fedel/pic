@@ -120,7 +120,7 @@ export default function App(props: any) {
   } 
 
   const web =
-    <span>
+    <div>
       <WebLayout logged={isLogged} covid={covid}>
         <Router basepath={process.env.PUBLIC_URL}>
           <WebHomePage default path="/web/home" logged={isLogged}/>
@@ -171,7 +171,7 @@ export default function App(props: any) {
         &nbsp;
         <Link onClick={toggleCovid}>Covid on/off</Link>
 
-    </span>
+    </div>
     
   if (isWeb) {
     return web;

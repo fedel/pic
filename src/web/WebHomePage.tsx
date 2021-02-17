@@ -207,9 +207,15 @@ function WebHomePage(props: any) {
         <Grid container>
           <Grid item sm={12} md={7}>
             <form noValidate autoComplete="off" >
-              <p><Typography variant="h4">Servicios de la Municipalidad</Typography></p>
+              <p><Typography variant="h3">Servicios de la Municipal</Typography></p>
               <p><Typography variant="body1">Podes buscar servicios, trámites y todo lo que necesitas de la municipalidad.</Typography></p>
-              <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{ width: "420px" }} />
+              <Hidden xsDown>
+                <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{ width: "420px" }} />
+              </Hidden>
+              <Hidden smUp>
+                <TextField id="outlined-basic" label="Buscar en rosario.gob.ar" variant="filled" style={{ width: "220px" }} />
+              </Hidden>
+
               <Button color="primary" variant="contained" style={{ height: 56 }} component={RouterLink} to="/pic/web/buscar">Buscar</Button>
             </form>
 
@@ -227,7 +233,7 @@ function WebHomePage(props: any) {
 
           </Grid>
         
-          <Grid item sm={12} md={5} className={classes.most}>
+          <Grid item xs={12} md={5} className={classes.most}>
             <p><Typography className={classes.reverse} variant="h6">Sugeridos</Typography></p>
             <Typography variant="body1">
               <p><Link className={classes.reverse} >+ Link 1</Link></p>
@@ -242,19 +248,19 @@ function WebHomePage(props: any) {
         <Divider></Divider>
 
         <Grid container>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Comercios y empleos</Link></Typography>
               <Typography variant="body2">Incluye habilitaciones, permisos y herramientas para el fortalecimiento de tu empresa o emprendimiento</Typography>
             </p>
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Ciudad, cultura y turismo</Link></Typography>
               <Typography variant="body2">Visitas a espacios culturales. </Typography>
             </p>
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Deportes</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
@@ -265,21 +271,21 @@ function WebHomePage(props: any) {
         <Divider></Divider>
 
         <Grid container>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Medioambiente y mantenimiento</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
 
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Movilidad, transporte y tránsito</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
 
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Salud</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
@@ -290,21 +296,21 @@ function WebHomePage(props: any) {
         <Divider></Divider>
 
         <Grid container>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Servicios sociales</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
 
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Tributos, multas y pagos</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
 
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Vivienda y construcción</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
@@ -315,13 +321,13 @@ function WebHomePage(props: any) {
         <Divider></Divider>
 
         <Grid container>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Educación</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
             </p>
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item sm={12} lg={4}>
             <p>
               <Typography variant="h6"><Link component={RouterLink} to="/web/navegar">Participación y transparencia</Link></Typography>
               <Typography variant="body2">Esto es para navegar por la sección... </Typography>
