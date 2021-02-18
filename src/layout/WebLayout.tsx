@@ -20,13 +20,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     line: {
         height: "6px",
-        backgroundColor: "#0066cc",
+        backgroundColor: "#ccc",
         padding: 0,
-        margin:0,
+        margin:theme.spacing(-1),
     },
     paper: {
       margin: theme.spacing(0),
-      backgroundColor: "#000",
+      backgroundColor: "#0066cc",
     },
   }),
 );
@@ -50,8 +50,8 @@ function WebLayout(props: any) {
   
     return (
         <React.Fragment>
-        <div style={{backgroundColor: "#000", paddingLeft: theme.spacing(1), paddingRight: theme.spacing(1),}}>
-            <div className={classes.paper} style={{backgroundColor: "#000"}}>
+        <div style={{backgroundColor: "#0066cc", paddingLeft: theme.spacing(1), paddingRight: theme.spacing(1),}}>
+            <div className={classes.paper} style={{backgroundColor: "#0066cc"}}>
                 <Container className={classes.container} maxWidth="md">
                 <Grid container spacing={1} className={classes.header}>
                     <Grid item xs={2}>
@@ -106,8 +106,8 @@ function WebLayout(props: any) {
                 <Container className={classes.container} maxWidth="md">
                     {props.covid && !props.logged &&
                     <div style={{paddingBottom: "1pt"}}>
-                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">COVID19</Link> | <div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt", wordBreak: "keep-all"}}>Síntomas y como cuidarte</div></Typography></p>
-                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">SUSTENTABLE</Link> | <div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt"}}>Humedales, transporte y ...</div></Typography></p>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">COVID19</Link><div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt", wordBreak: "keep-all"}}>&nbsp;| Síntomas y como cuidarte</div></Typography></p>
+                        <p><Typography color="primary" variant="h6"><Link  style={{color: "white"}} href="#">SUSTENTABLE</Link><div style={{color: "white", display: "inline-block", fontWeight: "normal", fontSize: "14pt"}}>&nbsp;| Humedales, transporte y ...</div></Typography></p>
                     </div>
                     }
 

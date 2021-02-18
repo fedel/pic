@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderBottom: "solid 3px #aaa",
     },
     most: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: "#777",
       paddingLeft: theme.spacing(1),
     },
     reverse: {
