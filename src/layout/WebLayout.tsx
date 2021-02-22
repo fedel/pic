@@ -113,7 +113,7 @@ function WebLayout(props: any) {
 
                     {props.covid && props.logged &&
                     <div style={{paddingBottom: "1pt"}}>
-                        <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{color: "#fff", verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link style={{color: "white"}} href="#notificaciones">&nbsp;Tienes una notificación feaciente del 7 de Febrero 2021</Link>&nbsp;<Chip color="default" size="small" label="NOTIFICACIÓN"></Chip></Typography></p>
+                        <p><Typography color="primary" variant="body1"><NotificationImportantOutlinedIcon style={{color: "#fff", verticalAlign: "middle"}}></NotificationImportantOutlinedIcon><Link style={{color: "white"}} href="#notificaciones">&nbsp;Tienes una notificación fehaciente del 7 de Febrero 2021</Link>&nbsp;<Chip color="default" size="small" label="NOTIFICACIÓN"></Chip></Typography></p>
                         <p><Typography color="primary" variant="body1"><MessageIcon style={{color: "#fff", verticalAlign: "middle"}}></MessageIcon> <Link style={{color: "white"}} component={RouterLink} to="/pic/noti/mensaje/msg1">&nbsp;Aviso de deuda 2021-02</Link></Typography></p>
                         <p><Typography color="primary" variant="body1"><AssignmentTurnedInOutlinedIcon style={{color: "#fff", verticalAlign: "middle"}}></AssignmentTurnedInOutlinedIcon><Link style={{color: "white"}}>&nbsp;El trámite 23234/2021 ha cambiado. Ingresa para ver los cambios.</Link></Typography></p>
                     </div>
